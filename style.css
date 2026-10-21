@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paroki Akre Borong - Keuskupan Ruteng</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--tua:#4B2E1A;--cok:#8B5A2B;--muda:#D2B48C;--krim:#F5E9D8;--putih:#FFFBF6}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--putih);color:var(--tua)}
+h1,h2,h3{font-family:'Cinzel',serif}
+.navbar{position:fixed;top:0;width:100%;z-index:999;background:rgba(255,251,246,0.8);backdrop-filter:blur(18px) saturate(150%);border-bottom:1px solid rgba(139,90,43,0.15);box-shadow:0 4px 30px rgba(75,46,26,0.08)}
+.nav-container{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 22px}
+.logo{display:flex;gap:12px;align-items:center}
+.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,#4B2E1A,#8B5A2B);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-weight:600}
+.menu{display:flex;gap:24px;list-style:none}
+.menu li{position:relative}
+.menu li a{color:var(--tua);text-decoration:none;font-weight:500;font-size:13px;letter-spacing:0.5px;padding:8px 0}
+.menu li:hover .dropdown{opacity:1;pointer-events:auto;top:115%;transform:translateX(-50%) scale(1)}
+.dropdown{position:absolute;left:50%;top:130%;transform:translateX(-50%) scale(0.95);min-width:250px;background:rgba(255,251,246,0.9);backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(210,180,140,0.4);box-shadow:0 20px 40px rgba(75,46,26,0.15);padding:12px;opacity:0;pointer-events:none;transition:.35s}
+.dropdown a{display:block;padding:10px 14px;border-radius:10px;font-size:13px;color:var(--tua);text-decoration:none}
+.dropdown a:hover{background:rgba(210,180,140,0.25);transform:translateX(4px)}
+.dropdown b{font-size:10px;letter-spacing:1.5px;color:var(--cok);display:block;margin:10px 0 4px 14px}
+.submenu{margin-left:12px;border-left:2px solid rgba(210,180,140,0.35);padding-left:10px}
+.hero{height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(1200px 600px at 20% 10%,#F5E9D8,transparent 60%),radial-gradient(900px 500px at 90% 80%,#D2B48C,transparent 60%),linear-gradient(180deg,#FFFBF6,#F5E9D8);position:relative;overflow:hidden}
+.hero-content{position:relative;z-index:2;max-width:840px;padding:0 24px;margin-top:60px}
+.badge{display:inline-flex;background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);border:1px solid rgba(139,90,43,0.15);padding:8px 18px;border-radius:100px;font-size:11px;letter-spacing:2px;margin-bottom:20px}
+.hero h1{font-size:clamp(34px,6vw,60px);line-height:0.95}
+.hero p{margin-top:16px;font-size:16px;line-height:1.7;color:#6B4A32;max-width:600px;margin-left:auto;margin-right:auto}
+.btn{padding:14px 26px;border-radius:100px;text-decoration:none;font-weight:600;font-size:13px;display:inline-flex;gap:8px;transition:.3s}
+.btn-p{background:#4B2E1A;color:white;box-shadow:0 8px 20px rgba(75,46,26,0.25)}
+.btn-g{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);color:var(--tua);border:1px solid rgba(139,90,43,0.18)}
+.section{max-width:1280px;margin:auto;padding:80px 24px}
+.head{text-align:center;margin-bottom:50px}
+.head span{font-size:10px;letter-spacing:4px;color:var(--cok);display:block;margin-bottom:10px}
+.head h2{font-size:clamp(26px,4vw,40px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
+.card{background:rgba(255,255,255,0.7);backdrop-filter:blur(16px);border-radius:20px;border:1px solid rgba(210,180,140,0.35);padding:24px;box-shadow:0 8px 30px rgba(75,46,26,0.06);transition:.3s}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(75,46,26,0.12)}
+.icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#F5E9D8,white);border:1px solid rgba(139,90,43,0.12);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.footer{margin-top:70px;background:linear-gradient(180deg,#4B2E1A,#3A2212);color:#E8D5B8;padding:50px 24px 24px}
+.foot{max-width:1280px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px}
+.foot a{color:#D2B48C;text-decoration:none;display:block;margin:6px 0;font-size:13px}
+.copy{max-width:1280px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(210,180,140,0.15);text-align:center;font-size:11px;color:#9C7D5E}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-container"><div class="logo"><div class="logo-icon">†</div><div><b>AKRE BORONG</b><br><span style="font-size:10px;letter-spacing:2px;color:#8B5A2B">PAROKI KATOLIK</span></div></div>
+<ul class="menu">
+<li><a href="#">BERANDA</a></li>
+<li><a href="#">BANGUNAN DAN SEJARAH</a><div class="dropdown"><b>SEJARAH</b><a href="#">Sejarah Gereja</a><a href="#">Sejarah Pendiri</a><a href="#">Letak Geografis</a></div></li>
+<li><a href="#">PAROKI</a><div class="dropdown"><a href="#">Visi Misi</a><a href="#">Dewan</a><a href="#">Petugas Liturgi</a><a href="#">Layanan Pastoral</a></div></li>
+<li><a href="#">MISA</a><div class="dropdown"><b>STASI LONGKO</b><div class="submenu"><a href="#">Misa Harian</a><a href="#">Misa Mingguan</a><a href="#">KBG</a></div><b>STASI PUSAT</b><div class="submenu"><a href="#">Misa Harian</a><a href="#">Misa Mingguan</a><a href="#">KBG</a></div><b>STASI TOKA</b><div class="submenu"><a href="#">Misa Harian</a><a href="#">Misa Mingguan</a><a href="#">KBG</a></div></div></li>
+<li><a href="#">PELAYANAN SAKRAMEN</a><div class="dropdown"><a href="#">Pembabtisan</a><a href="#">Pengakuan</a><a href="#">Komuni</a><a href="#">Pengurapan Orang Sakit</a><a href="#">Krisma</a><a href="#">Pernikahan</a><a href="#">Imamat</a></div></li>
+<li><a href="#">PENGUMUMAN</a><div class="dropdown"><a href="#">Panggilan Nikah</a></div></li>
+<li><a href="#">BERITA</a></li>
+</ul></div></nav>
+
+<section class="hero"><div class="hero-content"><div class="badge">✦ PAROKI ST. MARIA • BORONG • NTT</div><h1>Gereja Yang Hidup,<br>Umat Yang Bersaudara</h1><p>Website Resmi Paroki Akre Borong - Informasi misa stasi Longko, Pusat, Toka, pelayanan sakramen dan berita paroki.</p><div style="margin-top:28px;display:flex;gap:12px;justify-content:center"><a href="#" class="btn btn-p">⛪ Jadwal Misa</a><a href="#" class="btn btn-g">📖 Sejarah</a></div></div></section>
+
+<section class="section"><div class="head"><span>BANGUNAN & SEJARAH</span><h2>Bangunan dan Sejarah</h2></div><div class="grid"><div class="card"><div class="icon">⛪</div><h3>Sejarah Gereja</h3><p style="font-size:13px;color:#7A5A3E">Perjalanan dari kapela sederhana hingga paroki mandiri.</p></div><div class="card"><div class="icon">👤</div><h3>Sejarah Pendiri</h3><p style="font-size:13px;color:#7A5A3E">Biografi misionaris dan tokoh awam perintis iman.</p></div><div class="card"><div class="icon">📍</div><h3>Letak Geografis</h3><p style="font-size:13px;color:#7A5A3E">Peta wilayah Borong, Manggarai Timur, NTT.</p></div></div></section>
+
+<section class="section" style="background:linear-gradient(180deg,rgba(245,233,216,0.4),transparent)"><div class="head"><span>PAROKI</span><h2>Paroki</h2></div><div class="grid"><div class="card"><div class="icon">🎯</div><h3>Visi Misi</h3></div><div class="card"><div class="icon">👥</div><h3>Dewan Paroki</h3></div><div class="card"><div class="icon">✝️</div><h3>Petugas Liturgi</h3></div><div class="card"><div class="icon">🤝</div><h3>Layanan Pastoral</h3></div></div></section>
+
+<section class="section"><div class="head"><span>MISA</span><h2>Jadwal Misa & KBG</h2></div><div class="grid"><div class="card"><h3>Stasi Longko</h3><p>• Harian: Selasa & Jumat 06.00<br>• Mingguan: Minggu 08.00<br>• KBG: Rabu malam</p></div><div class="card" style="border-color:#8B5A2B"><h3>Stasi Pusat</h3><p>• Harian: Senin-Sabtu 05.30<br>• Mingguan: 07.00 & 09.30<br>• KBG: 32 KBG aktif</p></div><div class="card"><h3>Stasi Toka</h3><p>• Harian: Rabu & Sabtu 06.00<br>• Mingguan: Minggu 08.30<br>• KBG: Jumat sore</p></div></div></section>
+
+<section class="section" style="background:rgba(210,180,140,0.18);border-radius:32px"><div class="head"><span>SAKRAMEN</span><h2>Pelayanan Sakramen</h2></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))"><div class="card" style="text-align:center">💧<br>Pembabtisan</div><div class="card" style="text-align:center">🕊️<br>Pengakuan</div><div class="card" style="text-align:center">🍞<br>Komuni</div><div class="card" style="text-align:center">❤️<br>Orang Sakit</div><div class="card" style="text-align:center">🔥<br>Krisma</div><div class="card" style="text-align:center">💍<br>Pernikahan</div><div class="card" style="text-align:center">✝️<br>Imamat</div></div></section>
+
+<footer class="footer"><div class="foot"><div><h4>PAROKI AKRE BORONG</h4><p style="font-size:12px;color:#D2B48C">Borong, Manggarai Timur, NTT 86571<br>Keuskupan Ruteng</p></div><div><h4>MISA</h4><a href="#">Longko</a><a href="#">Pusat</a><a href="#">Toka</a></div><div><h4>SAKRAMEN</h4><a href="#">Baptis</a><a href="#">Nikah</a><a href="#">Krisma</a></div><div><h4>BERITA</h4><a href="#">Pengumuman</a><a href="#">Panggilan Nikah</a></div></div><div class="copy">© 2026 PAROKI AKRE BORONG • Coklat Putih Blur Artistik</div></footer>
+</body>
+</html>
