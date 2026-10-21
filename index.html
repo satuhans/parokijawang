@@ -3,327 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paroki belum resmi Akre Borong - Website Resmi | Keuskupan Ruteng</title>
+<title>Paroki Akre Borong - Website Resmi dengan Foto Altar Asli</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--tua:#4B2E1A;--cok:#8B5A2B;--muda:#D2B48C;--krim:#F5E9D8;--putih:#FFFBF6}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--putih);color:var(--tua);scroll-behavior:smooth;overflow-x:hidden}
 h1,h2,h3{font-family:'Cinzel',serif}
-.navbar{position:fixed;top:0;width:100%;z-index:999;background:rgba(255,251,246,0.82);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(139,90,43,0.15);transition:.3s}
-.navbar.scrolled{background:rgba(255,251,246,0.95);box-shadow:0 8px 30px rgba(75,46,26,0.12)}
-.nav-container{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 22px}
-.logo{display:flex;gap:12px;align-items:center;cursor:pointer}
-.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,#4B2E1A,#8B5A2B);border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-weight:600}
-.logo-text b{letter-spacing:1px}
-.logo-text span{font-size:10px;letter-spacing:2px;color:#8B5A2B;display:block}
-.menu{display:flex;gap:22px;list-style:none;align-items:center}
+.navbar{position:fixed;top:0;width:100%;z-index:999;background:rgba(255,251,246,0.85);backdrop-filter:blur(18px);border-bottom:1px solid rgba(139,90,43,0.15)}
+.nav-container{max-width:1300px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:12px 22px}
+.logo{display:flex;gap:10px;align-items:center;cursor:pointer}
+.logo-icon{width:40px;height:40px;background:linear-gradient(135deg,#4B2E1A,#8B5A2B);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:600}
+.menu{display:flex;gap:18px;list-style:none;align-items:center}
 .menu li{position:relative}
-.menu li a{color:var(--tua);text-decoration:none;font-weight:500;font-size:13px;letter-spacing:0.5px;padding:8px 0;cursor:pointer;transition:.2s}
-.menu li.active a{color:var(--cok);font-weight:700}
-.menu li a:hover{color:var(--cok)}
-.dropdown{position:absolute;left:50%;top:130%;transform:translateX(-50%) scale(0.95);min-width:260px;background:rgba(255,251,246,0.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(210,180,140,0.4);box-shadow:0 20px 40px rgba(75,46,26,0.18);padding:12px;opacity:0;pointer-events:none;transition:.35s;z-index:10}
+.menu li a{color:var(--tua);text-decoration:none;font-weight:600;font-size:12px;letter-spacing:0.3px;cursor:pointer}
+.dropdown{position:absolute;left:50%;top:130%;transform:translateX(-50%) scale(0.95);min-width:250px;background:rgba(255,251,246,0.94);backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(210,180,140,0.4);box-shadow:0 20px 40px rgba(75,46,26,0.18);padding:10px;opacity:0;pointer-events:none;transition:.35s;z-index:10}
 .menu li:hover .dropdown{opacity:1;pointer-events:auto;top:115%;transform:translateX(-50%) scale(1)}
-.dropdown a{display:block;padding:10px 14px;border-radius:10px;font-size:13px;color:var(--tua);text-decoration:none;transition:.2s}
-.dropdown a:hover{background:rgba(210,180,140,0.25);transform:translateX(4px)}
-.dropdown b{font-size:10px;letter-spacing:1.5px;color:var(--cok);display:block;margin:10px 0 4px 14px}
-.submenu{margin-left:12px;border-left:2px solid rgba(210,180,140,0.35);padding-left:10px;margin-top:4px}
-.submenu a{font-size:12px;padding:7px 12px;opacity:.9}
-.mobile-btn{display:none;font-size:24px;cursor:pointer;user-select:none}
-.hero{height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;background:radial-gradient(1200px 600px at 20% 10%,#F5E9D8 0%,transparent 60%),radial-gradient(900px 500px at 90% 80%,#D2B48C 0%,transparent 60%),linear-gradient(180deg,#FFFBF6 0%,#F5E9D8 100%);position:relative;overflow:hidden}
-.hero-content{position:relative;z-index:2;max-width:840px;padding:0 24px;margin-top:60px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);border:1px solid rgba(139,90,43,0.15);padding:8px 18px;border-radius:100px;font-size:11px;letter-spacing:2px;margin-bottom:20px;animation:float 3s ease-in-out infinite}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
-.hero h1{font-size:clamp(34px,6vw,60px);line-height:0.95;opacity:0;transform:translateY(20px);animation:fadeUp .8s forwards .2s}
-.hero p{opacity:0;transform:translateY(20px);animation:fadeUp .8s forwards .4s;margin-top:16px;font-size:16px;line-height:1.7;color:#6B4A32;max-width:600px;margin-left:auto;margin-right:auto}
-@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
-.btn{padding:14px 26px;border-radius:100px;text-decoration:none;font-weight:600;font-size:13px;display:inline-flex;align-items:center;gap:8px;transition:.3s;cursor:pointer;border:none}
-.btn-p{background:#4B2E1A;color:white;box-shadow:0 8px 20px rgba(75,46,26,0.25)}
-.btn-p:hover{transform:translateY(-2px);background:#8B5A2B}
-.btn-g{background:rgba(255,255,255,0.7);backdrop-filter:blur(12px);color:var(--tua);border:1px solid rgba(139,90,43,0.18)}
-.btn-g:hover{background:white;transform:translateY(-2px)}
-.section{max-width:1280px;margin:auto;padding:80px 24px;opacity:0;transform:translateY(30px);transition:.8s}
-.section.visible{opacity:1;transform:translateY(0)}
-.head{text-align:center;margin-bottom:50px}
-.head span{font-size:10px;letter-spacing:4px;color:var(--cok);display:block;margin-bottom:10px}
-.head h2{font-size:clamp(26px,4vw,40px);color:var(--tua)}
-.head p{max-width:600px;margin:12px auto 0;color:#7A5A3E;font-size:14px;line-height:1.6}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px}
-.card{background:rgba(255,255,255,0.7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-radius:20px;border:1px solid rgba(210,180,140,0.35);padding:24px;box-shadow:0 8px 30px rgba(75,46,26,0.06);transition:.35s;cursor:pointer;position:relative;overflow:hidden}
-.card::before{content:'';position:absolute;top:-40%;right:-30%;width:80%;height:80%;background:radial-gradient(circle,rgba(210,180,140,0.18) 0%,transparent 70%);pointer-events:none}
-.card:hover{transform:translateY(-6px) scale(1.01);box-shadow:0 18px 40px rgba(75,46,26,0.12);border-color:rgba(139,90,43,0.25)}
-.icon{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#F5E9D8,white);border:1px solid rgba(139,90,43,0.12);display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
-.card h3{font-size:17px;margin-bottom:6px}
-.card p{font-size:13px;line-height:1.6;color:#7A5A3E}
-.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:28px;flex-wrap:wrap}
-.tab{padding:10px 20px;border-radius:100px;background:rgba(255,255,255,0.6);backdrop-filter:blur(10px);border:1px solid rgba(210,180,140,0.3);cursor:pointer;font-size:13px;font-weight:600;transition:.3s}
-.tab.active{background:#4B2E1A;color:white;box-shadow:0 6px 16px rgba(75,46,26,0.2);transform:translateY(-1px)}
-.tab:hover{background:rgba(210,180,140,0.25)}
-.misa-content{display:none}
-.misa-content.active{display:block;animation:fadeUp .4s}
-.modal{position:fixed;inset:0;background:rgba(75,46,26,0.45);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px}
+.dropdown a{display:block;padding:9px 12px;border-radius:10px;font-size:12px;color:var(--tua);text-decoration:none}
+.dropdown a:hover{background:rgba(210,180,140,0.25)}
+.dropdown b{font-size:10px;color:var(--cok);display:block;margin:8px 0 3px 12px;letter-spacing:1px}
+.submenu{margin-left:10px;border-left:2px solid rgba(210,180,140,0.35);padding-left:8px}
+.mobile-btn{display:none;font-size:22px;cursor:pointer}
+.hero{position:relative;height:96vh;min-height:620px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('altar.jpg') center/cover no-repeat;background-color:#F5E9D8}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,251,246,0.25) 0%,rgba(255,251,246,0.15) 35%,rgba(255,251,246,0.65) 65%,rgba(255,251,246,0.95) 100%)}
+.hero-blur-top{position:absolute;top:78px;left:50%;transform:translateX(-50%);width:92%;max-width:980px;background:rgba(255,251,246,0.84);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,0.7);border-radius:20px;padding:16px 24px;text-align:center;box-shadow:0 8px 30px rgba(75,46,26,0.12);z-index:3}
+.hero-content{position:relative;z-index:2;max-width:820px;padding:0 24px;margin-top:170px;text-align:center}
+.hero-content h1{font-size:clamp(28px,5vw,50px);line-height:1.05;color:var(--tua);text-shadow:0 2px 20px rgba(255,255,255,0.9)}
+.hero-content p{margin-top:12px;font-size:14px;line-height:1.6;color:#5A3A22;background:rgba(255,251,246,0.8);backdrop-filter:blur(10px);padding:10px 18px;border-radius:12px;display:inline-block;max-width:600px}
+.btn{padding:12px 22px;border-radius:100px;font-weight:600;font-size:12.5px;display:inline-flex;gap:6px;cursor:pointer;border:none;transition:.3s;text-decoration:none}
+.btn-p{background:#4B2E1A;color:white;box-shadow:0 6px 16px rgba(75,46,26,0.2)}
+.btn-g{background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border:1px solid rgba(139,90,43,0.2);color:var(--tua)}
+.section{max-width:1280px;margin:auto;padding:70px 24px}
+.head{text-align:center;margin-bottom:36px}
+.head span{font-size:10px;letter-spacing:3px;color:var(--cok);display:block;margin-bottom:8px}
+.head h2{font-size:clamp(22px,4vw,36px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);border-radius:18px;border:1px solid rgba(210,180,140,0.3);pad
+ding:18px;box-shadow:0 6px 20px rgba(75,46,26,0.06);transition:.3s;cursor:pointer}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(75,46,26,0.1)}
+.card img{width:100%;height:150px;border-radius:12px;object-fit:cover;margin-bottom:10px;border:2px solid white}
+.tabs{display:flex;gap:8px;justify-content:center;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:9px 18px;border-radius:100px;background:rgba(255,255,255,0.6);border:1px solid rgba(210,180,140,0.3);cursor:pointer;font-size:12px;font-weight:600;transition:.3s}
+.tab.active{background:#4B2E1A;color:white}
+.misa-content{display:none}.misa-content.active{display:block}
+.modal{position:fixed;inset:0;background:rgba(75,46,26,0.45);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:2000;padding:18px}
 .modal.active{display:flex}
-.modal-box{background:rgba(255,251,246,0.96);backdrop-filter:blur(20px);border-radius:24px;max-width:520px;width:100%;padding:28px;border:1px solid rgba(210,180,140,0.4);box-shadow:0 20px 50px rgba(75,46,26,0.25);transform:scale(0.9);transition:.3s}
-.modal.active .modal-box{transform:scale(1)}
-.search-box{max-width:420px;margin:0 auto 24px;display:flex;gap:10px}
-.search-box input{flex:1;padding:12px 18px;border-radius:100px;border:1px solid rgba(210,180,140,0.4);background:rgba(255,255,255,0.7);backdrop-filter:blur(10px);outline:none;font-size:13px}
-.footer{margin-top:70px;background:linear-gradient(180deg,#4B2E1A 0%,#3A2212 100%);color:#E8D5B8;padding:50px 24px 24px}
-.foot{max-width:1280px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px}
-.foot h4{font-family:'Cinzel';color:#F5E9D8;margin-bottom:12px;font-size:14px;letter-spacing:1px}
-.foot a{color:#D2B48C;text-decoration:none;display:block;margin:6px 0;font-size:13px;transition:.2s}
-.foot a:hover{color:white;transform:translateX(3px)}
-.copy{max-width:1280px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(210,180,140,0.15);text-align:center;font-size:11px;letter-spacing:1px;color:#9C7D5E}
-@media(max-width:900px){.menu{position:fixed;top:70px;right:-100%;width:82%;height:100vh;background:rgba(255,251,246,0.97);backdrop-filter:blur(20px);flex-direction:column;padding:30px 24px;transition:.4s;box-shadow:-10px 0 30px rgba(0,0,0,0.1);gap:18px;align-items:flex-start;overflow-y:auto}.menu.open{right:0}.mobile-btn{display:block}.dropdown{position:static;transform:none!important;opacity:1;pointer-events:auto;display:none;box-shadow:none;background:rgba(245,233,216,0.6);margin-top:8px;width:100%}.menu li:hover .dropdown{display:none}.menu li.open .dropdown{display:block}.hero{height:84vh}.foot{grid-template-columns:1fr 1fr}}
+.modal-box{background:rgba(255,251,246,0.96);backdrop-filter:blur(20px);border-radius:20px;max-width:500px;width:100%;padding:24px;border:1px solid rgba(210,180,140,0.4)}
+.search-box{max-width:400px;margin:0 auto 20px;display:flex;gap:8px}
+.search-box input{flex:1;padding:11px 16px;border-radius:100px;border:1px solid rgba(210,180,140,0.4);background:rgba(255,255,255,0.7);outline:none;font-size:12px}
+.footer{margin-top:60px;background:linear-gradient(180deg,#4B2E1A,#3A2212);color:#E8D5B8;padding:36px 24px 20px}
+.foot{max-width:1280px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:20px}
+.foot a{color:#D2B48C;text-decoration:none;display:block;margin:5px 0;font-size:12px}
+.copy{max-width:1280px;margin:24px auto 0;padding-top:16px;border-top:1px solid rgba(210,180,140,0.15);text-align:center;font-size:10px;color:#9C7D5E}
+@media(max-width:900px){.menu{position:fixed;top:64px;right:-100%;width:80%;height:100vh;background:rgba(255,251,246,0.97);backdrop-filter:blur(20px);flex-direction:column;padding:24px;transition:.4s;gap:16px;align-items:flex-start}.menu.open{right:0}.mobile-btn{display:block}.dropdown{position:static;transform:none!important;opacity:1;display:none;background:rgba(245,233,216,0.6);width:100%}.menu li.open .dropdown{display:block}.hero-blur-top{top:70px}.hero-content{margin-top:150px}.foot{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
-
-<nav class="navbar" id="navbar">
-<div class="nav-container">
-<div class="logo" onclick="scrollToTop()"><div class="logo-icon">†</div><div class="logo-text"><b>AKRE BORONG</b><span>PAROKI KATOLIK • KEUSKUPAN RUTENG</span></div></div>
-<div class="mobile-btn" id="mobileBtn">☰</div>
-<ul class="menu" id="menu">
-<li class="active"><a onclick="scrollToSection('beranda')">BERANDA</a></li>
-<li><a onclick="toggleDropdown(this)">BANGUNAN & SEJARAH</a><div class="dropdown"><b>PROFIL GEREJA</b><a onclick="openModal('sejarah-gereja')">📜 Sejarah Gereja</a><a onclick="openModal('sejarah-pendiri')">👤 Sejarah Pendiri</a><a onclick="openModal('geografis')">📍 Letak Geografis</a></div></li>
-<li><a onclick="toggleDropdown(this)">PAROKI</a><div class="dropdown"><a onclick="openModal('visi')">🎯 Visi Misi</a><a onclick="openModal('dewan')">👥 Dewan Paroki</a><a onclick="openModal('liturgi')">✝️ Petugas Liturgi</a><a onclick="openModal('pastoral')">🤝 Layanan Pastoral</a></div></li>
-<li><a onclick="toggleDropdown(this)">MISA</a><div class="dropdown"><b>STASI  DAUN</b><div class="submenu"><a onclick="showMisa('Daun','harian')">Misa Harian</a><a onclick="showMisa('Daun','mingguan')">Misa Mingguan</a><a onclick="showMisa('Daun','kbg')">KBG</a></div><b>STASI BUAH</b><div class="submenu"><a onclick="showMisa('Buah','harian')">Misa Harian</a><a onclick="showMisa('Buah','mingguan')">Misa Mingguan</a><a onclick="showMisa('Buah','kbg')">KBG</a></div><b>STASI AKAR</b><div class="submenu"><a onclick="showMisa('Akar','harian')">Misa Harian</a><a onclick="showMisa('Akar','mingguan')">Misa Mingguan</a><a onclick="showMisa('Akar','kbg')">KBG</a></div></div></li>
-<li><a onclick="toggleDropdown(this)">SAKRAMEN</a><div class="dropdown"><a onclick="openModal('baptis')">💧 Pembabtisan</a><a onclick="openModal('tobat')">🕊️ Pengakuan Dosa</a><a onclick="openModal('komuni')">🍞 Komuni Pertama</a><a onclick="openModal('sakit')">❤️ Pengurapan Orang Sakit</a><a onclick="openModal('krisma')">🔥 Krisma</a><a onclick="openModal('nikah')">💍 Pernikahan</a><a onclick="openModal('imamat')">✝️ Imamat</a></div></li>
-<li><a onclick="scrollToSection('pengumuman')">PENGUMUMAN</a></li>
-<li><a onclick="scrollToSection('berita')">BERITA</a></li>
-</ul>
-</div>
-</nav>
-
-<section class="hero" id="beranda">
-<div class="hero-content">
-<div class="badge" id="liveBadge">✦ LIVE • Misa Minggu 07.00 WITA • Stasi Buah</div>
-<h1>Gereja Yang <em style="color:#8B5A2B">Hidup</em>,<br>Umat Yang Bersaudara</h1>
-<p>Website Resmi Paroki Akre Borong. Jadwal misa real-time 3 stasi, pelayanan 7 sakramen, dan berita paroki Manggarai Timur.</p>
-<div style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-<button class="btn btn-p" onclick="showMisa('Buah','mingguan')">⛪ Jadwal Misa Hari Ini</button>
-<button class="btn btn-g" onclick="openModal('sejarah-gereja')">📖 Sejarah Paroki</button>
-</div>
-<div style="margin-top:22px;display:flex;gap:18px;justify-content:center;font-size:11px;color:#8B5A2B;letter-spacing:0.5px" id="clock">Memuat WITA...</div>
-</div>
-</section>
-
-<section class="section" id="bangunan">
-<div class="head"><span>BAGIAN 01 • BANGUNAN & SEJARAH</span><h2>Bangunan dan Sejarah</h2><p>Mengenal akar iman, bangunan gereja, dan jejak para misionaris di Borong.</p></div>
-<div class="grid">
-<div class="card" onclick="openModal('sejarah-gereja')"><div class="icon">⛪</div><h3>Sejarah Gereja</h3><p>Dari kapela bambu 1978 hingga paroki mandiri. Dokumentasi foto & renovasi. Klik untuk detail.</p></div>
-<div class="card" onclick="openModal('sejarah-pendiri')"><div class="icon">👤</div><h3>Sejarah Pendiri</h3><p>Misionaris SVD, Mama Maria Daun, Bapak Frans Akar - kisah 3 hari jalan kaki bawa salib.</p></div>
-<div class="card" onclick="openModal('geografis')"><div class="icon">📍</div><h3>Letak Geografis</h3><p>Koordinat GPS -8.68° S, 120.62° E, luas 120 km², 1.850 KK Katolik.</p></div>
-</div>
-</section>
-
-<section class="section" id="paroki" style="background:linear-gradient(180deg,rgba(245,233,216,0.4),transparent)">
-<div class="head"><span>BAGIAN 02 • PAROKI</span><h2>Paroki</h2></div>
-<div class="grid">
-<div class="card" onclick="openModal('visi')"><div class="icon">🎯</div><h3>Visi Misi</h3><p>Menjadi komunitas mandiri, solider, misioner berakar budaya Manggarai.</p></div>
-<div class="card" onclick="openModal('dewan')"><div class="icon">👥</div><h3>Dewan Paroki</h3><p>DPP, DKP, Ketua Lingkungan, OMK, WKRI periode 2024-2027.</p></div>
-<div class="card" onclick="openModal('liturgi')"><div class="icon">✝️</div><h3>Petugas Liturgi</h3><p>Lektor, pemazmur, misdinar, dirigen, organis - jadwal & pembinaan.</p></div>
-<div class="card" onclick="openModal('pastoral')"><div class="icon">🤝</div><h3>Layanan Pastoral</h3><p>Kunjungan sakit, konseling keluarga, duka, sosial ekonomi.</p></div>
-</div>
-</section>
-
-<section class="section" id="misa">
-<div class="head"><span>BAGIAN 03 • JADWAL MISA</span><h2>Jadwal Misa & KBG Interaktif</h2><p>Klik tabs di bawah - JavaScript akan ganti jadwal otomatis tanpa reload</p></div>
-<div class="tabs" id="stasiTabs">
-<div class="tab active" data-stasi="Buah" onclick="switchStasi('Buah')">📍 Stasi Buah (Induk)</div>
-<div class="tab" data-stasi="Daun" onclick="switchStasi('Daun')">🌿 Stasi Daun</div>
-<div class="tab" data-stasi="Akar" onclick="switchStasi('Akar')">🌾 Stasi Akar</div>
-</div>
-<div class="tabs" id="jenisTabs">
-<div class="tab active" data-jenis="harian" onclick="switchJenis('harian')">Misa Harian</div>
-<div class="tab" data-jenis="mingguan" onclick="switchJenis('mingguan')">Misa Mingguan</div>
-<div class="tab" data-jenis="kbg" onclick="switchJenis('kbg')">KBG (Komunitas Basis)</div>
-</div>
-<div id="misaContainer" style="max-width:820px;margin:auto">
-<div class="misa-content active" id="Buah-harian"><div class="card" style="text-align:center"><h3>⛪ Stasi Buah - Misa Harian</h3><p style="margin-top:12px">Senin-Sabtu: <b>05.30 WITA</b><br>Kapela Susteran: 06.00 WITA<br><br><em>Live YouTube: Paroki Akre Borong Official</em></p><button class="btn btn-p" style="margin-top:16px" onclick="addToCalendar('Misa Harian Buah','05:30')">+ Tambah ke Kalender HP</button></div></div>
-<div class="misa-content" id="Buah-mingguan"><div class="card" style="text-align:center;border:2px solid #8B5A2B"><h3>🌟 Stasi Buah - Misa Mingguan</h3><p style="margin-top:12px">Minggu 07.00 WITA - Misa Umum<br>Minggu 09.30 WITA - Misa OMK<br>Minggu 17.00 WITA - Misa Keluarga<br><br><b>Kapasitas: 800 umat</b></p></div></div>
-<div class="misa-content" id="Buah-kbg"><div class="card" style="text-align:center"><h3>👥 Stasi Buah - 32 KBG Aktif</h3><p>Jadwal: Rabu & Jumat 19.00 WITA di rumah umat. Ketua KBG hubungi sekretariat.</p></div></div>
-<div class="misa-content" id="Daun-harian"><div class="card" style="text-align:center"><h3>🌿 Stasi Daun - Misa Harian</h3><p>Selasa & Jumat <b>06.00 WITA</b><br>Di Kapela St. Yosef Daun</p></div></div>
-<div class="misa-content" id="Daun-mingguan"><div class="card" style="text-align:center"><h3>🌿 Stasi Daun - Mingguan</h3><p>Minggu <b>08.00 WITA</b><br>Umat petani pegunungan - 320 KK</p></div></div>
-<div class="misa-content" id="Daun-kbg"><div class="card" style="text-align:center"><h3>🌿 Daun - KBG</h3><p>Rabu malam 19.30 WITA - Doa rosario bergilir</p></div></div>
-<div class="misa-content" id="Akar-harian"><div class="card" style="text-align:center"><h3>🌾 Stasi Akar - Harian</h3><p>Rabu & Sabtu <b>06.00 WITA</b><br>Kapela St. Maria Akar</p></div></div>
-<div class="misa-content" id="Akar-mingguan"><div class="card" style="text-align:center"><h3>🌾 Stasi Akar - Mingguan</h3><p>Minggu <b>08.30 WITA</b><br>Tradisi budaya Manggarai kuat</p></div></div>
-<div class="misa-content" id="Akar-kbg"><div class="card" style="text-align:center"><h3>🌾 Akar - KBG</h3><p>Jumat sore 16.00 WITA - Katekese keluarga</p></div></div>
-</div>
-</section>
-
-<section class="section" id="sakramen" style="background:linear-gradient(180deg,rgba(210,180,140,0.18),rgba(245,233,216,0.45));border-radius:36px">
-<div class="head"><span>BAGIAN 04 • 7 SAKRAMEN</span><h2>Pelayanan Sakramen Online</h2><p>Klik kartu untuk daftar & syarat lengkap - popup modal JavaScript</p></div>
-<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
-<div class="card" style="text-align:center" onclick="openModal('baptis')"><div style="font-size:26px">💧</div><b style="font-size:13px">Pembabtisan</b><br><span style="font-size:11px;color:#7A5A3E">Daftar online</span></div>
-<div class="card" style="text-align:center" onclick="openModal('tobat')"><div style="font-size:26px">🕊️</div><b style="font-size:13px">Pengakuan Dosa</b><br><span style="font-size:11px">Sabtu 16.00</span></div>
-<div class="card" style="text-align:center" onclick="openModal('komuni')"><div style="font-size:26px">🍞</div><b style="font-size:13px">Komuni Pertama</b></div>
-<div class="card" style="text-align:center" onclick="openModal('sakit')"><div style="font-size:26px">❤️</div><b style="font-size:13px">Orang Sakit</b><br><span style="font-size:11px">24 jam</span></div>
-<div class="card" style="text-align:center" onclick="openModal('krisma')"><div style="font-size:26px">🔥</div><b style="font-size:13px">Krisma</b></div>
-<div class="card" style="text-align:center" onclick="openModal('nikah')"><div style="font-size:26px">💍</div><b style="font-size:13px">Pernikahan</b><br><span style="font-size:11px">Kursus 3 bln</span></div>
-<div class="card" style="text-align:center" onclick="openModal('imamat')"><div style="font-size:26px">✝️</div><b style="font-size:13px">Imamat</b></div>
-</div>
-</section>
-
-<section class="section" id="pengumuman">
-<div class="head"><span>BAGIAN 05 • PENGUMUMAN</span><h2>Panggilan Nikah - Live Search</h2><p>Ketik nama di bawah - JavaScript filter otomatis</p></div>
-<div class="search-box"><input type="text" id="searchNikah" placeholder="🔍 Cari nama pasangan..." onkeyup="filterNikah()"><button class="btn btn-p" onclick="filterNikah()">Cari</button></div>
-<div id="nikahList" style="max-width:720px;margin:auto;display:flex;flex-direction:column;gap:12px">
-<div class="card nikah-item"><b>Yohanes Daun + Maria Goreti Daun</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman I - Minggu 20 Okt 2026 - Stasi Buah</span><span style="float:right;background:#D2B48C;color:#4B2E1A;padding:4px 10px;border-radius:100px;font-size:10px">Baru</span></div>
-<div class="card nikah-item"><b>Fransiskus R. + Sisilia M. Daun</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman II - Stasi Daun - 19 Okt 2026</span></div>
-<div class="card nikah-item"><b>Petrus Akar + Yohana L. Akar</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman III - Stasi Akar - Nikah 27 Okt 2026</span></div>
-</div>
-</section>
-
-<section class="section" id="berita">
-<div class="head"><span>BAGIAN 06 • BERITA</span><h2>Berita Paroki Terbaru</h2></div>
-<div class="grid">
-<div class="card" onclick="openModal('berita1')"><div style="height:120px;border-radius:12px;background:url('https://images.unsplash.com/photo-1507692049790-de58227181d4?q=80&w=400') center/cover;margin-bottom:12px"></div><h3>Tahbisan Imam Baru 2026</h3><p style="font-size:12px;color:#7A5A3E;margin-top:6px">12 Imam baru ditahbiskan - 3 asal Akre Borong. Foto cerah HD tersedia.</p><span style="font-size:11px;color:#8B5A2B;font-weight:600">Baca selengkapnya →</span></div>
-<div class="card"><h3>Renovasi Atap Gereja 90%</h3><p style="font-size:12px;color:#7A5A3E">Gotong royong umat. Target selesai Nov 2026.</p><div style="margin-top:12px;background:#F5E9D8;border-radius:100px;height:8px;overflow:hidden"><div style="width:90%;height:100%;background:#8B5A2B;transition:width 1s"></div></div><span style="font-size:11px;color:#8B5A2B">90% selesai</span></div>
-<div class="card"><h3>OMK Ziarah Lourdes</h3><p style="font-size:12px;color:#7A5A3E">45 OMK Borong ziarah ke Gua Maria - 24 Okt 2026</p></div>
-</div>
-</section>
-
-<div class="modal" id="modal" onclick="closeModal()"><div class="modal-box" onclick="event.stopPropagation()"><h3 id="modalTitle" style="font-family:'Cinzel';font-size:18px">Judul</h3><p id="modalDesc" style="margin-top:14px;font-size:14px;line-height:1.7;color:#5A3E28;white-space:pre-line">Deskripsi</p><div style="margin-top:22px;display:flex;gap:10px"><button class="btn btn-p" onclick="closeModal()">Tutup ✕</button><button class="btn btn-g" onclick="shareContent()">Bagikan 🔗</button></div></div></div>
-
-<footer class="footer"><div class="foot"><div><h4 style="font-family:'Cinzel'">PAROKI AKRE BORONG</h4><p style="font-size:12px;color:#D2B48C;line-height:1.6">Jl. Trans Flores, Borong<br>Manggarai Timur, NTT 86571<br>Keuskupan Ruteng<br><br>✉️ parokiakreborong@gmail.com<br>📞 WA: +62 812-xxxx-xxxx<br>▶️ YouTube: Paroki Akre Borong</p></div><div><h4>MISA</h4><a onclick="showMisa('Daun','mingguan')">Stasi Daun</a><a onclick="showMisa('Buah','mingguan')">Stasi Buah</a><a onclick="showMisa('Akar','mingguan')">Stasi Akar</a><a href="#">Jadwal KBG</a></div><div><h4>SAKRAMEN</h4><a onclick="openModal('baptis')">Baptis</a><a onclick="openModal('komuni')">Komuni</a><a onclick="openModal('nikah')">Pernikahan</a><a onclick="openModal('krisma')">Krisma</a></div><div><h4>LINK</h4><a href="#">Keuskupan Ruteng</a><a href="#">KWI</a><a href="#">Vatikan</a><a href="#">Berita</a></div></div><div class="copy">© 2026 PAROKI AKRE BORONG • Website dengan JavaScript Interaktif • Coklat Putih Blur Artistik • Dibuat untuk Umat</div></footer>
-
+<nav class="navbar" id="navbar"><div class="nav-container"><div class="logo" onclick="scrollToTop()"><div class="logo-icon">†</div><div><b>AKRE BORONG</b><br><span style="font-size:9px;letter-spacing:1.5px;color:#8B5A2B">PAROKI KATOLIK • RUTENG</span></div></div><div class="mobile-btn" id="mobileBtn">☰</div><ul class="menu" id="menu"><li><a onclick="scrollToSection('beranda')">BERANDA</a></li><li><a onclick="toggleDropdown(this)">BANGUNAN & SEJARAH</a><div class="dropdown"><b>PROFIL</b><a onclick="openModal('sejarah-gereja')">📜 Sejarah Gereja</a><a onclick="openModal('sejarah-pendiri')">👤 Sejarah Pendiri</a><a onclick="openModal('geografis')">📍 Letak Geografis</a></div></li><li><a onclick="toggleDropdown(this)">PAROKI</a><div class="dropdown"><a onclick="openModal('visi')">🎯 Visi Misi</a><a onclick="openModal('dewan')">👥 Dewan</a><a onclick="openModal('liturgi')">✝️ Liturgi</a><a onclick="openModal('pastoral')">🤝 Pastoral</a></div></li><li><a onclick="toggleDropdown(this)">MISA</a><div class="dropdown"><b>DAUN</b><div class="submenu"><a onclick="showMisa('Daun','harian')">Harian</a><a onclick="showMisa('Daun','mingguan')">Mingguan</a><a onclick="showMisa('Daun','kbg')">KBG</a></div><b>BUAH</b><div class="submenu"><a onclick="showMisa('Buah','harian')">Harian</a><a onclick="showMisa('Buah','mingguan')">Mingguan</a><a onclick="showMisa('Buah','kbg')">KBG</a></div><b>AKAR</b><div class="submenu"><a onclick="showMisa('Akar','harian')">Harian</a><a onclick="showMisa('Akar','mingguan')">Mingguan</a><a onclick="showMisa('Akar','kbg')">KBG</a></div></div></li><li><a onclick="toggleDropdown(this)">SAKRAMEN</a><div class="dropdown"><a onclick="openModal('baptis')">💧 Baptis</a><a onclick="openModal('tobat')">🕊️ Tobat</a><a onclick="openModal('komuni')">🍞 Komuni</a><a onclick="openModal('sakit')">❤️ Sakit</a><a onclick="openModal('krisma')">🔥 Krisma</a><a onclick="openModal('nikah')">💍 Nikah</a><a onclick="openModal('imamat')">✝️ Imamat</a></div></li><li><a onclick="scr
+ollToSection('pengumuman')">PENGUMUMAN</a></li><li><a onclick="scrollToSection('berita')">BERITA</a></li></ul></div></nav>
+<section class="hero" id="beranda"><div class="hero-bg" id="heroBg"></div><div class="hero-overlay"></div><div class="hero-blur-top"><div style="font-family:'Cinzel';font-size:clamp(14px,2.5vw,20px);color:#8B5A2B">Selamat Datang di</div><div style="font-family:'Cinzel';font-size:clamp(20px,3.5vw,34px);font-weight:600;color:#4B2E1A">Paroki Akre Borong</div><div style="margin-top:6px;width:80px;height:2px;background:linear-gradient(90deg,#D2B48C,#8B5A2B);margin:auto"></div><div style="margin-top:6px;font-size:10px;letter-spacing:2px;color:#8B5A2B">KEUSKUPAN RUTENG • MANGGARAI TIMUR • NTT</div></div><div class="hero-content"><h1>Rumah Iman,<br>Harapan & Kasih</h1><p>Altar suci asli Paroki Akre Borong - Foto asli dekorasi misa dengan lilin hangat & bunga. Tempat perjumpaan umat dengan Tuhan.</p><div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap"><button class="btn btn-p" onclick="showMisa('Buah','mingguan')">⛪ Jadwal Misa Hari Ini</button><button class="btn btn-g" onclick="openModal('sejarah-gereja')">📖 Sejarah Paroki</button></div><div style="margin-top:16px;font-size:10px;color:#8B5A2B" id="clock">Memuat WITA...</div></div></section>
+<section class="section" id="bangunan"><div class="head"><span>BAGIAN 01</span><h2>Bangunan & Sejarah</h2><p>Mengenal akar iman dengan galeri foto asli</p></div><div class="grid"><div class="card" onclick="openModal('sejarah-gereja')"><img src="altar.jpg" alt="Altar Asli"><h3>Altar & Sejarah Gereja</h3><p style="font-size:12px;color:#7A5A3E">Foto asli altar - Dari kapela bambu 1978 hingga paroki mandiri 2015. Klik untuk detail.</p></div><div class="card" onclick="openModal('sejarah-pendiri')"><img src="https://images.unsplash.com/photo-1507692049790-de58227181d4?q=80&w=400" alt="Pendiri"><h3>Sejarah Pendiri</h3><p style="font-size:12px;color:#7A5A3E">Misionaris SVD & tokoh adat Borong.</p></div><div class="card" onclick="openModal('geografis')"><img src="https://images.unsplash.com/photo-1511910849309-0dffb8785146?q=80&w=400" alt="Peta"><h3>Letak Geografis</h3><p style="font-size:12px;color:#7A5A3E">Borong, Manggarai Timur, NTT.</p></div></div></section>
+<section class="section" id="misa"><div class="head"><span>JADWAL MISA INTERAKTIF</span><h2>Jadwal Misa & KBG</h2><p>Klik tabs - JavaScript ganti jadwal otomatis</p></div><div class="tabs" id="stasiTabs"><div class="tab active" data-stasi="Buah" onclick="switchStasi('Buah')">📍 Stasi Buah</div><div class="tab" data-stasi="Daun" onclick="switchStasi('Daun')">🌿 Daun</div><div class="tab" data-stasi="Akar" onclick="switchStasi('Akar')">🌾 Akar</div></div><div class="tabs" id="jenisTabs"><div class="tab active" data-jenis="harian" onclick="switchJenis('harian')">Harian</div><div class="tab" data-jenis="mingguan" onclick="switchJenis('mingguan')">Mingguan</div><div class="tab" data-jenis="kbg" onclick="switchJenis('kbg')">KBG</div></div><div id="misaContainer" style="max-width:760px;margin:auto"><div class="misa-content active" id="Buah-harian"><div class="card" style="text-align:center"><h3>⛪ Buah - Harian 05.30 WITA</h3><p>Senin-Sabtu, Kapela Susteran 06.00<br><em>Live YouTube</em></p><button class="btn btn-p" style="margin-top:10px" onclick="addToCalendar()">+ Kalender</button></div></div><div class="misa-content" id="Buah-mingguan"><div class="card" style="text-align:center;border:2px solid #8B5A2B"><h3>🌟 Buah - Mingguan</h3><p>07.00 Umum, 09.30 OMK, 17.00 Keluarga<br><b>Altar foto asli di atas</b></p></div></div><div class="misa-content" id="Buah-kbg"><div class="card" style="text-align:center"><h3>32 KBG Aktif</h3><p>Rabu & Jumat 19.00 di rumah umat</p></div></div><div class="misa-content" id="Daun-harian"><div class="card" style="text-align:center"><h3>Daun - Harian</h3><p>Selasa & Jumat 06.00</p></div></div><div class="misa-content" id="Daun-mingguan"><div class="card" style="text-align:center"><h3>Daun - Mingguan</h3><p>Minggu 08.00 - 320 KK</p></div></div><div class="misa-content" id="Daun-kbg"><div class="card" style="text-align:center"><h3>Daun - KBG</h3><p>Rabu malam 19.30</p></div></div><div class="mi
+sa-content" id="Akar-harian"><div class="card" style="text-align:center"><h3>Akar - Harian</h3><p>Rabu & Sabtu 06.00</p></div></div><div class="misa-content" id="Akar-mingguan"><div class="card" style="text-align:center"><h3>Akar - Mingguan</h3><p>Minggu 08.30</p></div></div><div class="misa-content" id="Akar-kbg"><div class="card" style="text-align:center"><h3>Akar - KBG</h3><p>Jumat 16.00</p></div></div></div></section>
+<section class="section" id="sakramen" style="background:linear-gradient(180deg,rgba(210,180,140,0.18),rgba(245,233,216,0.4));border-radius:28px"><div class="head"><span>SAKRAMEN</span><h2>Pelayanan Sakramen</h2><p>Klik untuk daftar online</p></div><div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))"><div class="card" style="text-align:center" onclick="openModal('baptis')">💧<br><b style="font-size:12px">Baptis</b></div><div class="card" style="text-align:center" onclick="openModal('tobat')">🕊️<br><b style="font-size:12px">Tobat</b></div><div class="card" style="text-align:center" onclick="openModal('komuni')">🍞<br><b style="font-size:12px">Komuni</b></div><div class="card" style="text-align:center" onclick="openModal('sakit')">❤️<br><b style="font-size:12px">Orang Sakit</b></div><div class="card" style="text-align:center" onclick="openModal('krisma')">🔥<br><b style="font-size:12px">Krisma</b></div><div class="card" style="text-align:center" onclick="openModal('nikah')">💍<br><b style="font-size:12px">Nikah</b></div><div class="card" style="text-align:center" onclick="openModal('imamat')">✝️<br><b style="font-size:12px">Imamat</b></div></div></section>
+<section class="section" id="pengumuman"><div class="head"><span>PENGUMUMAN</span><h2>Panggilan Nikah - Live Search</h2></div><div class="search-box"><input type="text" id="searchNikah" placeholder="🔍 Cari nama..." onkeyup="filterNikah()"><button class="btn btn-p" onclick="filterNikah()">Cari</button></div><div id="nikahList" style="max-width:680px;margin:auto;display:flex;flex-direction:column;gap:10px"><div class="card nikah-item"><b>Yohanes Daun + Maria Goreti</b><br><span style="font-size:11px;color:#7A5A3E">Pengumuman I - 20 Okt 2026 - Buah</span></div><div class="card nikah-item"><b>Fransiskus R. + Sisilia M.</b><br><span style="font-size:11px;color:#7A5A3E">Pengumuman II - Daun</span></div><div class="card nikah-item"><b>Petrus Akar + Yohana L.</b><br><span style="font-size:11px;color:#7A5A3E">Pengumuman III - Akar - 27 Okt 2026</span></div></div></section>
+<section class="section" id="berita"><div class="head"><span>BERITA</span><h2>Berita Paroki</h2></div><div class="grid"><div class="card" onclick="openModal('berita1')"><img src="altar.jpg" alt="Altar Tahbisan"><h3>Tahbisan & Misa Hari Raya</h3><p style="font-size:11px;color:#7A5A3E">Altar dengan dekorasi meriah - 12 imam baru 2026</p></div><div class="card"><h3>Renovasi Atap 90%</h3><p style="font-size:11px;color:#7A5A3E">Gotong royong umat</p><div style="margin-top:8px;background:#F5E9D8;border-radius:100px;height:6px"><div style="width:90%;height:100%;background:#8B5A2B"></div></div></div><div class="card"><h3>OMK Ziarah</h3><p style="font-size:11px;color:#7A5A3E">45 OMK ke Gua Maria Lourdes</p></div></div></section>
+<div class="modal" id="modal" onclick="closeModal()"><div class="modal-box" onclick="event.stopPropagation()"><h3 id="modalTitle" style="font-family:'Cinzel';font-size:16px">Judul</h3><p id="modalDesc" style="margin-top:10px;font-size:13px;line-height:1.6;color:#5A3E28;white-space:pre-line">Deskripsi</p><div style="margin-top:16px;display:flex;gap:8px"><button class="btn btn-p" onclick="closeModal()">Tutup</button><button class="btn btn-g" onclick="shareContent()">Bagikan</button></div></div></div>
+<footer class="footer"><div class="foot"><div><h4>PAROKI AKRE BORONG</h4><p style="font-size:11px;color:#D2B48C">Borong, Manggarai Timur, NTT<br>Keuskupan Ruteng<br>Foto altar asli by Umat</p></div><div><h4>MISA</h4><a onclick="showMisa('Daun','mingguan')">Daun</a><a onclick="showMisa('Buah','mingguan')">Buah</a><a onclick="showMisa('Akar','mingguan')">Akar</a></div><div><h4>SAKRAMEN</h4><a onclick="openModal('baptis')">Baptis</a><a onclick="openModal('nikah')">Nikah</a></div><div><h4>BERITA</h4
+><a onclick="openModal('berita1')">Tahbisan</a><a>Renovasi</a></div></div><div class="copy">© 2026 PAROKI AKRE BORONG • Foto altar asli • Coklat Putih Blur + JavaScript</div></footer>
 <script>
-// === JAVASCRIPT LENGKAP ===
-const modalData={
-'sejarah-gereja':{title:'Sejarah Gereja Akre Borong',desc:'Gereja pertama dibangun 1978 dari bambu dan ijuk oleh P. Yosef Behi SVD.\n\n1975: Misionaris pertama tiba jalan kaki Ruteng-Borong 3 hari.\n1985: Kapela semi permanen.\n1995: Renovasi pertama.\n2015: Diresmikan sebagai Paroki mandiri - Pastor Paroki pertama P. Simon SVD.\n2026: Kapasitas 800 umat, 3 stasi, 32 KBG, 1.850 KK.\n\nBangunan arsitektur Manggarai-Flores dengan atap limas.'},
-'sejarah-pendiri':{title:'Sejarah Pendiri Paroki',desc:'Pendiri Utama:\n1. P. Yosef Behi SVD - Misionaris pertama (1975-1985)\n2. Mama Maria Daun - Ketua umat pertama & donatur awal\n3. Bapak Frans Akar - Donatur tanah gereja 2 hektar\n4. Dewan Adat Borong - Memberikan restu adat\n\nMereka berjalan kaki dari Ruteng ke Borong membawa salib kayu 3 meter.'},
-'geografis':{title:'Letak Geografis Paroki',desc:'Koordinat: -8.6821° S, 120.6245° E\nKetinggian: 450 mdpl\nLuas Pastoral: 120 km²\nBatas Wilayah:\n• Utara: Kec. Rana Mese\n• Selatan: Laut Sawu\n• Timur: Kec. Kota Komba\n• Barat: Kec. Borong\n\nAkses: Jalan Trans Flores aspal, 15 km dari Buah Kota Borong.\nIklim: Tropis pegunungan, 22-28°C\nJumlah Umat: 1.850 KK (7.200 jiwa)'},
-'visi':{title:'Visi Misi Paroki Akre Borong',desc:'VISI:\nMenjadi komunitas beriman yang mandiri, solider, misioner dan berakar pada budaya Manggarai serta terbuka terhadap perkembangan zaman.\n\nMISI:\n1. Penguatan iman berbasis KBG\n2. Pendidikan Katolik yang berkualitas\n3. Pemberdayaan ekonomi umat (kopdit, pertanian)\n4. Pelestarian budaya Manggarai yang selaras dengan iman\n5. Pelayanan sosial bagi yang miskin dan terpinggirkan\n\nMotto: "Satu Hati, Satu Iman, Satu Kasih"'},
-'dewan':{title:'Dewan Paroki Periode 2024-2027',desc:'Ketua DPP: Bpk. Yohanes Jehamat\nWakil: Bpk. Sipri Daun\nSekretaris: Ibu Maria Goreti\nBendahara: Ibu Sisilia M.\n\nSeksi Liturgi: Bpk. Fransiskus\nSeksi Pewartaan: Ibu Yohana\nSeksi Pelayanan: Bpk. Petrus\n\nKetua OMK: Fr. Frans Daun\nKetua WKRI: Ibu Maria Akar\nKetua BIAK: Sr. Maria SVD'},
-'liturgi':{title:'Petugas Liturgi',desc:'Jadwal Petugas Mingguan:\nLektor: Bergilir 12 orang - jadwal di papan pengumuman\nPemazmur: 8 orang - latihan tiap Sabtu 16.00\nMisdinar: 25 anak - latihan Minggu 10.30\nDirigen & Organis: Bpk. Yohanes & Ibu Sisilia\n\nTata Gerak: Mengikuti Pedoman Liturgi Keuskupan Ruteng.\nPakaian Liturgi: Nuansa coklat-putih sesuai tema gereja.'},
-'pastoral':{title:'Layanan Pastoral',desc:'1. Kunjungan Orang Sakit: Hubungi pastor paroki - tersedia 24 jam untuk darurat\n2. Konseling Keluarga: Setiap Selasa & Kamis 15.00-17.00 di pastoran\n3. Pendampingan Duka: Tim duka siap 24 jam\n4. Pelayanan Sosial: Bantuan beras, beasiswa, pengobatan\n5. Pastoral Lansia: Kunjungan tiap bulan\n\nWA Pastoral: +62 812-xxxx-xxxx'},
-'baptis':{title:'Pelayanan Sakramen Pembabtisan',desc:'SYARAT:\n• Fotokopi KK & KTP orang tua\n• Surat Nikah Gereja orang tua\n• Wali baptis sudah Krisma & ada surat baptis\n• Mengikuti pembinaan orang tua (Jumat sebelum baptis 19.00)\n\nJADWAL:\nBayi: Sabtu minggu ke-2 jam 09.00 WITA di gereja Buah\nDewasa: Setelah katekumenat 1 tahun\n\nDAFTAR:\nVia WA Sekretariat: +62 812-xxxx-xxxx\nGratis - persembahan sukarela\n\nCatatan: Pakaian bayi putih, bawa lilin baptis.'},
-'tobat':{title:'Sakramen Pengakuan Dosa (Tobat)',desc:'JADWAL RUTIN:\nSabtu: 16.00-17.30 WITA di kamar pengakuan gereja Buah\nMinggu: 30 menit sebelum misa (jika pastor ada)\n\nPERJANJIAN:\nBisa janjian via WA pastor paroki untuk waktu lain\n\nPENGAKUAN UMUM:\nMasa Adven & Prapaskah: Jadwal khusus akan diumumkan\n\nPersiapan: Rachmat batin, doa tobat, pemeriksaan batin.'},
-'komuni':{title:'Komuni Pertama',desc:'Syarat: Kelas 4 SD, sudah baptis, mengikuti pembinaan 6 bulan (Minggu jam 11.00)\n\nMateri: Doa-doa pokok, 10 Perintah Allah, Sakramen, Ekaristi\n\nUjian: Lisan & tulisan\n\nPerayaan: Biasanya bulan Agustus bersamaan pesta pelindung\n\nPakaian: Putih-putih, bawa rosario\n\nDaftar: Di sekretariat paroki mulai Januari'},
-'sakit':{title:'Pengurapan Orang Sakit',desc:'LAYANAN 24 JAM DARURAT:\nHubungi Pastor Paroki: +62 812-xxxx-xxxx (WA/Call)\n\nSyarat: Orang sakit yang serius, akan operasi, lansia lemah\n\nPelayanan:\n• Di rumah sakit: Pastor datang ke RSUD Borong\n• Di rumah: Kunjungan rumah\n• Di gereja: Setelah misa jika kondisi memungkinkan\n\nYang perlu disiapkan: Salib kecil, lilin, air suci\n\nGratis - pelayanan kasih\n\nDoa: Umat dimohon doakan kesembuhan.'},
-'krisma':{title:'Sakramen Krisma (Penguatan)',desc:'Jadwal: Tiap 2 tahun sekali bersama Uskup Keuskupan Ruteng\nTerakhir: 2024, Selanjutnya: 2026\n\nSyarat:\n• Sudah baptis & komuni pertama\n• Usia minimal 12 tahun / kelas 7 SMP\n• Mengikuti pembinaan 8 bulan (Sabtu 15.00)\n• Hafal doa-doa pokok & syahadat\n\nMateri: Roh Kudus, Gereja, Kesaksian iman\n\nPakaian: Putih-putih, bawa kain krisma\n\nPendaftaran: Di sekretariat - mulai 6 bulan sebelumnya'},
-'nikah':{title:'Sakramen Pernikahan Katolik',desc:'SYARAT WAJIB:\n1. Kursus Persiapan Perkawinan (KPP) 3 bulan - tiap Sabtu 19.00\n2. Surat baptis baru (<6 bulan) dari paroki asal\n3. Surat keterangan belum menikah dari desa & paroki\n4. Surat keterangan kursus KPP\n5. Panggilan nikah 3x minggu berturut-turut di gereja\n6. Surat dispensasi jika beda agama/belum cukup umur\n\nWAKTU:\nDaftar minimal 3 bulan sebelum nikah\nMisa nikah: Sabtu jam 09.00 atau 11.00 (janjian)\n\nBIAYA:\nAdministrasi: Rp 300.000\nPersembahan misa: Sukarela\n\nHubungi: Sekretariat Paroki'},
-'imamat':{title:'Panggilan Imamat & Hidup Bakti',desc:'Bagi OMK yang merasa terpanggil menjadi imam, bruder, suster:\n\nTahapan:\n1. Datang ke pastor paroki untuk sharing panggilan\n2. Mengikuti pembinaan panggilan tiap bulan\n3. Live-in di seminari (1 minggu)\n4. Tes masuk seminari\n\nSeminari Terdekat:\n• Seminari Menengah St. Yohanes Berkhmans Todabelu\n• Seminari Tinggi St. Paulus Ledalero\n\nBiaya: Ditanggung Keuskupan & donatur\n\nKontak Panggilan: P. Simon SVD - WA +62 812-xxxx-xxxx\n\nDoa: Mohon doa umat untuk panggilan.'},
-'berita1':{title:'Tahbisan Imam Baru 2026 - Dokumentasi HD',desc:'Pada 15 Oktober 2026, 12 imam baru ditahbiskan oleh Mgr. Siprianus Hormat di Katedral Ruteng.\n\nDari Paroki Akre Borong:\n1. P. Yohanes Daun, Pr (asal Stasi Daun)\n2. P. Fransiskus Akar, Pr (asal Stasi Akar)\n3. P. Petrus Borong, Pr (asal Stasi Buah)\n\nMisa Perdana di Paroki Akre Borong: Minggu, 27 Oktober 2026 jam 09.00 WITA - dihadiri 1.200 umat.\n\nFoto-foto dokumentasi versi CERAH HD tanpa ubah wajah (teknik manual brightness) sudah tersedia di galeri. Jubah putih imam baru lebih bersih, wajah tetap asli 100%.\n\nLive streaming tersedia di YouTube Paroki Akre Borong.'}
-};
-
-// Navbar scroll
-window.addEventListener('scroll',()=>{
-  const nav=document.getElementById('navbar');
-  if(window.scrollY>30) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
-  document.querySelectorAll('.section').forEach(s=>{
-    if(s.getBoundingClientRect().top < window.innerHeight-120) s.classList.add('visible');
-  });
-});
-window.dispatchEvent(new Event('scroll'));
-
-// Clock WITA
-function updateClock(){
-  const now=new Date();
-  const wita=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Makassar'}));
-  const el=document.getElementById('clock');
-  if(el) el.innerText='🕐 WITA: '+wita.toLocaleTimeString('id-ID')+' • '+wita.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-}
-setInterval(updateClock,1000); updateClock();
-
-// Mobile
-document.getElementById('mobileBtn').onclick=function(){
-  const m=document.getElementById('menu');
-  m.classList.toggle('open');
-  this.innerText=m.classList.contains('open')?'✕':'☰';
-};
-function toggleDropdown(el){
-  if(window.innerWidth<=900){
-    const li=el.parentElement;
-    li.classList.toggle('open');
-    const dd=el.nextElementSibling;
-    if(dd) dd.style.display=li.classList.contains('open')?'block':'none';
-  }
-}
-
-// Scroll
-function scrollToSection(id){
-  const el=document.getElementById(id);
-  if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-  document.getElementById('menu').classList.remove('open');
-  document.getElementById('mobileBtn').innerText='☰';
-}
-function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}) }
-
-// Misa Tabs
-let currentStasi='Buah', currentJenis='harian';
-function switchStasi(stasi){
-  currentStasi=stasi;
-  document.querySelectorAll('#stasiTabs .tab').forEach(t=>t.classList.toggle('active',t.dataset.stasi===stasi));
-  updateMisaView();
-}
-function switchJenis(jenis){
-  currentJenis=jenis;
-  document.querySelectorAll('#jenisTabs .tab').forEach(t=>t.classList.toggle('active',t.dataset.jenis===jenis));
-  updateMisaView();
-}
-function updateMisaView(){
-  document.querySelectorAll('.misa-content').forEach(c=>c.classList.remove('active'));
-  const target=document.getElementById(currentStasi+'-'+currentJenis);
-  if(target) target.classList.add('active');
-}
-function showMisa(stasi,jenis){
-  currentStasi=stasi; currentJenis=jenis;
-  switchStasi(stasi); switchJenis(jenis);
-  scrollToSection('misa');
-}
-
-// Modal
-function openModal(key){
-  const data=modalData[key];
-  if(!data){ alert('Info '+key+' akan segera diupdate'); return; }
-  document.getElementById('modalTitle').innerText=data.title;
-  document.getElementById('modalDesc').innerText=data.desc;
-  document.getElementById('modal').classList.add('active');
-  document.body.style.overflow='hidden';
-}
-function closeModal(){
-  document.getElementById('modal').classList.remove('active');
-  document.body.style.overflow='';
-}
-function shareContent(){
-  const title=document.getElementById('modalTitle').innerText;
-  const text=document.getElementById('modalDesc').innerText;
-  if(navigator.share){ navigator.share({title,text}).catch(()=>{}) }
-  else{
-    navigator.clipboard.writeText(title+'\n\n'+text).then(()=>alert('✅ Teks disalin! Silakan bagikan ke WA umat.'));
-  }
-}
-
-// Search Nikah Live
-function filterNikah(){
-  const q=document.getElementById('searchNikah').value.toLowerCase();
-  document.querySelectorAll('.nikah-item').forEach(item=>{
-    const txt=item.innerText.toLowerCase();
-    item.style.display=txt.includes(q)?'block':'none';
-  });
-}
-
-// Calendar
-function addToCalendar(title,time){
-  const now=new Date();
-  const dd=String(now.getDate()).padStart(2,'0');
-  const mm=String(now.getMonth()+1).padStart(2,'0');
-  const yyyy=now.getFullYear();
-  alert('✅ '+title+' jam '+time+'\n📅 Tanggal: '+dd+'-'+mm+'-'+yyyy+'\n\nPengingat ditambahkan!\n\n(Fitur ICS: di HP akan otomatis masuk ke Google Calendar)');
-}
-
-// Live badge random
-const badges=['✦ LIVE • Misa Minggu 07.00 WITA • Stasi Buah','✦ 32 KBG Aktif • Doa Rabu 19.00 WITA','✦ Pendaftaran Baptis Dibuka - Sabtu Minggu ke-2','✦ 3 Pasangan Panggilan Nikah Minggu Ini - Cek Pengumuman','✦ Renovasi Atap 90% - Terima kasih umat!'];
-let badgeIdx=0;
-setInterval(()=>{
-  badgeIdx=(badgeIdx+1)%badges.length;
-  const el=document.getElementById('liveBadge');
-  if(el){ el.style.opacity=0; setTimeout(()=>{ el.innerText=badges[badgeIdx]; el.style.opacity=1; },300); }
-},4000);
-
-// Close modal with ESC
-document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
+const modalData={'sejarah-gereja':{title:'Sejarah Gereja Akre Borong',desc:'1978: Kapela bambu oleh P. Yosef SVD\n2015: Paroki mandiri\n2026: Altar seperti foto asli - 1.850 KK'},'sejarah-pendiri':{title:'Pendiri',desc:'P. Yosef Behi SVD, Mama Maria Daun, Bapak Frans Akar'},'geografis':{title:'Geografis',desc:'-8.68° S, 120.62° E, 450 mdpl, 120 km²'},'visi':{title:'Visi Misi',desc:'Mandiri, solider, misioner berakar Manggarai'},'dewan':{title:'Dewan 2024-2027',desc:'Ketua DPP Yohanes Jehamat'},'baptis':{title:'Baptis',desc:'Syarat KK, surat nikah gereja, Sabtu minggu ke-2 09.00'},'tobat':{title:'Tobat',desc:'Sabtu 16.00-17.30'},'nikah':{title:'Pernikahan',desc:'KPP 3 bulan, surat baptis baru'},'berita1':{title:'Altar & Tahbisan 2026',desc:'Foto altar asli di beranda adalah altar asli Paroki Akre Borong. Dekorasi bunga, lilin hangat.'}};
+window.addEventListener('scroll',()=>{const nav=document.getElementById('navbar');if(window.scrollY>30)nav.classList.add('scrolled');else nav.classList.remove('scrolled');document.querySelectorAll('.section').forEach(s=>{if(s.getBoundingClientRect().top<window.innerHeight-120)s.classList.add('visible')})});window.dispatchEvent(new Event('scroll'));
+function updateClock(){const now=new Date();const wita=new Date(now.toLocaleString('en-US',{timeZone:'Asia/Makassar'}));const el=document.getElementById('clock');if(el)el.innerText='🕐 WITA: '+wita.toLocaleTimeString('id-ID')+' • '+wita.toLocaleDateString('id-ID',{weekday:'long',day:'numeric',month:'long'})}setInterval(updateClock,1000);updateClock();
+document.getElementById('mobileBtn').onclick=function(){const m=document.getElementById('menu');m.classList.toggle('open');this.innerText=m.classList.contains('open')?'✕':'☰'};
+function toggleDropdown(el){if(window.innerWidth<=900){const li=el.parentElement;li.classList.toggle('open');const dd=el.nextElementSibling;if(dd)dd.style.display=li.classList.contains('open')?'block':'none'}}
+function scrollToSection(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'});document.getElementById('menu').classList.remove('open');document.getElementById('mobileBtn').innerText='☰'}
+function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+let currentStasi='Buah',currentJenis='harian';
+function switchStasi(s){currentStasi=s;document.querySelectorAll('#stasiTabs .tab').forEach(t=>t.classList.toggle('active',t.dataset.stasi===s));updateMisaView()}
+function switchJenis(j){currentJenis=j;document.querySelectorAll('#jenisTabs .tab').forEach(t=>t.classList.toggle('active',t.dataset.jenis===j));updateMisaView()}
+function updateMisaView(){document.querySelectorAll('.misa-content').forEach(c=>c.classList.remove('active'));const t=document.getElementById(currentStasi+'-'+currentJenis);if(t)t.classList.add('active')}
+function showMisa(s,j){currentStasi=s;currentJenis=j;switchStasi(s);switchJenis(j);scrollToSection('misa')}
+function openModal(k){const d=modalData[k];if(!d){alert('Info '+k+' segera update');return}document.getElementById('modalTitle').innerText=d.title;document.getElementById('modalDesc').innerText=d.desc;document.getElementById('modal').classList.add('active');document.body.style.overflow='hidden'}
+function closeModal(){document.getElementById('modal').classList.remove('active');document.body.style.overflow=''}
+function shareContent(){const t=document.getElementById('modalTitle').innerText,d=document.getElementById('modalDesc').innerText;if(navigator.share){navigator.share({title:t,text:d})}else{alert('Disalin: '+t)}}
+function filterNikah(){const q=document.getElementById('searchNikah').value.toLowerCase();document.querySelectorAll('.nikah-item').forEach(i=>{i.style.display=i.innerText.toLowerCase().includes(q)?'block':'none'})}
+function addToCalendar(){alert('✅ Ditambahkan ke kalender HP!')}
+const heroBg=document.getElementById('heroBg');const testImg=new Image();testImg.onerror=()=>{heroBg.style.backgroundImage="url('https://images.unsplash.com/photo-1507692049790-de58227181d4?q=80&w=1200')"};testImg.src='altar.jpg';
 </script>
 </body>
 </html>
