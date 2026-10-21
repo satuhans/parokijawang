@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paroki Akre Borong - Website Resmi | Keuskupan Ruteng</title>
+<title>Paroki belum resmi Akre Borong - Website Resmi | Keuskupan Ruteng</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--tua:#4B2E1A;--cok:#8B5A2B;--muda:#D2B48C;--krim:#F5E9D8;--putih:#FFFBF6}
@@ -86,7 +86,7 @@ h1,h2,h3{font-family:'Cinzel',serif}
 <li class="active"><a onclick="scrollToSection('beranda')">BERANDA</a></li>
 <li><a onclick="toggleDropdown(this)">BANGUNAN & SEJARAH</a><div class="dropdown"><b>PROFIL GEREJA</b><a onclick="openModal('sejarah-gereja')">📜 Sejarah Gereja</a><a onclick="openModal('sejarah-pendiri')">👤 Sejarah Pendiri</a><a onclick="openModal('geografis')">📍 Letak Geografis</a></div></li>
 <li><a onclick="toggleDropdown(this)">PAROKI</a><div class="dropdown"><a onclick="openModal('visi')">🎯 Visi Misi</a><a onclick="openModal('dewan')">👥 Dewan Paroki</a><a onclick="openModal('liturgi')">✝️ Petugas Liturgi</a><a onclick="openModal('pastoral')">🤝 Layanan Pastoral</a></div></li>
-<li><a onclick="toggleDropdown(this)">MISA</a><div class="dropdown"><b>STASI LONGKO</b><div class="submenu"><a onclick="showMisa('longko','harian')">Misa Harian</a><a onclick="showMisa('longko','mingguan')">Misa Mingguan</a><a onclick="showMisa('longko','kbg')">KBG</a></div><b>STASI PUSAT</b><div class="submenu"><a onclick="showMisa('pusat','harian')">Misa Harian</a><a onclick="showMisa('pusat','mingguan')">Misa Mingguan</a><a onclick="showMisa('pusat','kbg')">KBG</a></div><b>STASI TOKA</b><div class="submenu"><a onclick="showMisa('toka','harian')">Misa Harian</a><a onclick="showMisa('toka','mingguan')">Misa Mingguan</a><a onclick="showMisa('toka','kbg')">KBG</a></div></div></li>
+<li><a onclick="toggleDropdown(this)">MISA</a><div class="dropdown"><b>STASI  DAUN</b><div class="submenu"><a onclick="showMisa('Daun','harian')">Misa Harian</a><a onclick="showMisa('Daun','mingguan')">Misa Mingguan</a><a onclick="showMisa('Daun','kbg')">KBG</a></div><b>STASI BUAH</b><div class="submenu"><a onclick="showMisa('Buah','harian')">Misa Harian</a><a onclick="showMisa('Buah','mingguan')">Misa Mingguan</a><a onclick="showMisa('Buah','kbg')">KBG</a></div><b>STASI AKAR</b><div class="submenu"><a onclick="showMisa('Akar','harian')">Misa Harian</a><a onclick="showMisa('Akar','mingguan')">Misa Mingguan</a><a onclick="showMisa('Akar','kbg')">KBG</a></div></div></li>
 <li><a onclick="toggleDropdown(this)">SAKRAMEN</a><div class="dropdown"><a onclick="openModal('baptis')">💧 Pembabtisan</a><a onclick="openModal('tobat')">🕊️ Pengakuan Dosa</a><a onclick="openModal('komuni')">🍞 Komuni Pertama</a><a onclick="openModal('sakit')">❤️ Pengurapan Orang Sakit</a><a onclick="openModal('krisma')">🔥 Krisma</a><a onclick="openModal('nikah')">💍 Pernikahan</a><a onclick="openModal('imamat')">✝️ Imamat</a></div></li>
 <li><a onclick="scrollToSection('pengumuman')">PENGUMUMAN</a></li>
 <li><a onclick="scrollToSection('berita')">BERITA</a></li>
@@ -96,11 +96,11 @@ h1,h2,h3{font-family:'Cinzel',serif}
 
 <section class="hero" id="beranda">
 <div class="hero-content">
-<div class="badge" id="liveBadge">✦ LIVE • Misa Minggu 07.00 WITA • Stasi Pusat</div>
+<div class="badge" id="liveBadge">✦ LIVE • Misa Minggu 07.00 WITA • Stasi Buah</div>
 <h1>Gereja Yang <em style="color:#8B5A2B">Hidup</em>,<br>Umat Yang Bersaudara</h1>
 <p>Website Resmi Paroki Akre Borong. Jadwal misa real-time 3 stasi, pelayanan 7 sakramen, dan berita paroki Manggarai Timur.</p>
 <div style="margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-<button class="btn btn-p" onclick="showMisa('pusat','mingguan')">⛪ Jadwal Misa Hari Ini</button>
+<button class="btn btn-p" onclick="showMisa('Buah','mingguan')">⛪ Jadwal Misa Hari Ini</button>
 <button class="btn btn-g" onclick="openModal('sejarah-gereja')">📖 Sejarah Paroki</button>
 </div>
 <div style="margin-top:22px;display:flex;gap:18px;justify-content:center;font-size:11px;color:#8B5A2B;letter-spacing:0.5px" id="clock">Memuat WITA...</div>
@@ -111,7 +111,7 @@ h1,h2,h3{font-family:'Cinzel',serif}
 <div class="head"><span>BAGIAN 01 • BANGUNAN & SEJARAH</span><h2>Bangunan dan Sejarah</h2><p>Mengenal akar iman, bangunan gereja, dan jejak para misionaris di Borong.</p></div>
 <div class="grid">
 <div class="card" onclick="openModal('sejarah-gereja')"><div class="icon">⛪</div><h3>Sejarah Gereja</h3><p>Dari kapela bambu 1978 hingga paroki mandiri. Dokumentasi foto & renovasi. Klik untuk detail.</p></div>
-<div class="card" onclick="openModal('sejarah-pendiri')"><div class="icon">👤</div><h3>Sejarah Pendiri</h3><p>Misionaris SVD, Mama Maria Longko, Bapak Frans Toka - kisah 3 hari jalan kaki bawa salib.</p></div>
+<div class="card" onclick="openModal('sejarah-pendiri')"><div class="icon">👤</div><h3>Sejarah Pendiri</h3><p>Misionaris SVD, Mama Maria Daun, Bapak Frans Akar - kisah 3 hari jalan kaki bawa salib.</p></div>
 <div class="card" onclick="openModal('geografis')"><div class="icon">📍</div><h3>Letak Geografis</h3><p>Koordinat GPS -8.68° S, 120.62° E, luas 120 km², 1.850 KK Katolik.</p></div>
 </div>
 </section>
@@ -129,9 +129,9 @@ h1,h2,h3{font-family:'Cinzel',serif}
 <section class="section" id="misa">
 <div class="head"><span>BAGIAN 03 • JADWAL MISA</span><h2>Jadwal Misa & KBG Interaktif</h2><p>Klik tabs di bawah - JavaScript akan ganti jadwal otomatis tanpa reload</p></div>
 <div class="tabs" id="stasiTabs">
-<div class="tab active" data-stasi="pusat" onclick="switchStasi('pusat')">📍 Stasi Pusat (Induk)</div>
-<div class="tab" data-stasi="longko" onclick="switchStasi('longko')">🌿 Stasi Longko</div>
-<div class="tab" data-stasi="toka" onclick="switchStasi('toka')">🌾 Stasi Toka</div>
+<div class="tab active" data-stasi="Buah" onclick="switchStasi('Buah')">📍 Stasi Buah (Induk)</div>
+<div class="tab" data-stasi="Daun" onclick="switchStasi('Daun')">🌿 Stasi Daun</div>
+<div class="tab" data-stasi="Akar" onclick="switchStasi('Akar')">🌾 Stasi Akar</div>
 </div>
 <div class="tabs" id="jenisTabs">
 <div class="tab active" data-jenis="harian" onclick="switchJenis('harian')">Misa Harian</div>
@@ -139,15 +139,15 @@ h1,h2,h3{font-family:'Cinzel',serif}
 <div class="tab" data-jenis="kbg" onclick="switchJenis('kbg')">KBG (Komunitas Basis)</div>
 </div>
 <div id="misaContainer" style="max-width:820px;margin:auto">
-<div class="misa-content active" id="pusat-harian"><div class="card" style="text-align:center"><h3>⛪ Stasi Pusat - Misa Harian</h3><p style="margin-top:12px">Senin-Sabtu: <b>05.30 WITA</b><br>Kapela Susteran: 06.00 WITA<br><br><em>Live YouTube: Paroki Akre Borong Official</em></p><button class="btn btn-p" style="margin-top:16px" onclick="addToCalendar('Misa Harian Pusat','05:30')">+ Tambah ke Kalender HP</button></div></div>
-<div class="misa-content" id="pusat-mingguan"><div class="card" style="text-align:center;border:2px solid #8B5A2B"><h3>🌟 Stasi Pusat - Misa Mingguan</h3><p style="margin-top:12px">Minggu 07.00 WITA - Misa Umum<br>Minggu 09.30 WITA - Misa OMK<br>Minggu 17.00 WITA - Misa Keluarga<br><br><b>Kapasitas: 800 umat</b></p></div></div>
-<div class="misa-content" id="pusat-kbg"><div class="card" style="text-align:center"><h3>👥 Stasi Pusat - 32 KBG Aktif</h3><p>Jadwal: Rabu & Jumat 19.00 WITA di rumah umat. Ketua KBG hubungi sekretariat.</p></div></div>
-<div class="misa-content" id="longko-harian"><div class="card" style="text-align:center"><h3>🌿 Stasi Longko - Misa Harian</h3><p>Selasa & Jumat <b>06.00 WITA</b><br>Di Kapela St. Yosef Longko</p></div></div>
-<div class="misa-content" id="longko-mingguan"><div class="card" style="text-align:center"><h3>🌿 Stasi Longko - Mingguan</h3><p>Minggu <b>08.00 WITA</b><br>Umat petani pegunungan - 320 KK</p></div></div>
-<div class="misa-content" id="longko-kbg"><div class="card" style="text-align:center"><h3>🌿 Longko - KBG</h3><p>Rabu malam 19.30 WITA - Doa rosario bergilir</p></div></div>
-<div class="misa-content" id="toka-harian"><div class="card" style="text-align:center"><h3>🌾 Stasi Toka - Harian</h3><p>Rabu & Sabtu <b>06.00 WITA</b><br>Kapela St. Maria Toka</p></div></div>
-<div class="misa-content" id="toka-mingguan"><div class="card" style="text-align:center"><h3>🌾 Stasi Toka - Mingguan</h3><p>Minggu <b>08.30 WITA</b><br>Tradisi budaya Manggarai kuat</p></div></div>
-<div class="misa-content" id="toka-kbg"><div class="card" style="text-align:center"><h3>🌾 Toka - KBG</h3><p>Jumat sore 16.00 WITA - Katekese keluarga</p></div></div>
+<div class="misa-content active" id="Buah-harian"><div class="card" style="text-align:center"><h3>⛪ Stasi Buah - Misa Harian</h3><p style="margin-top:12px">Senin-Sabtu: <b>05.30 WITA</b><br>Kapela Susteran: 06.00 WITA<br><br><em>Live YouTube: Paroki Akre Borong Official</em></p><button class="btn btn-p" style="margin-top:16px" onclick="addToCalendar('Misa Harian Buah','05:30')">+ Tambah ke Kalender HP</button></div></div>
+<div class="misa-content" id="Buah-mingguan"><div class="card" style="text-align:center;border:2px solid #8B5A2B"><h3>🌟 Stasi Buah - Misa Mingguan</h3><p style="margin-top:12px">Minggu 07.00 WITA - Misa Umum<br>Minggu 09.30 WITA - Misa OMK<br>Minggu 17.00 WITA - Misa Keluarga<br><br><b>Kapasitas: 800 umat</b></p></div></div>
+<div class="misa-content" id="Buah-kbg"><div class="card" style="text-align:center"><h3>👥 Stasi Buah - 32 KBG Aktif</h3><p>Jadwal: Rabu & Jumat 19.00 WITA di rumah umat. Ketua KBG hubungi sekretariat.</p></div></div>
+<div class="misa-content" id="Daun-harian"><div class="card" style="text-align:center"><h3>🌿 Stasi Daun - Misa Harian</h3><p>Selasa & Jumat <b>06.00 WITA</b><br>Di Kapela St. Yosef Daun</p></div></div>
+<div class="misa-content" id="Daun-mingguan"><div class="card" style="text-align:center"><h3>🌿 Stasi Daun - Mingguan</h3><p>Minggu <b>08.00 WITA</b><br>Umat petani pegunungan - 320 KK</p></div></div>
+<div class="misa-content" id="Daun-kbg"><div class="card" style="text-align:center"><h3>🌿 Daun - KBG</h3><p>Rabu malam 19.30 WITA - Doa rosario bergilir</p></div></div>
+<div class="misa-content" id="Akar-harian"><div class="card" style="text-align:center"><h3>🌾 Stasi Akar - Harian</h3><p>Rabu & Sabtu <b>06.00 WITA</b><br>Kapela St. Maria Akar</p></div></div>
+<div class="misa-content" id="Akar-mingguan"><div class="card" style="text-align:center"><h3>🌾 Stasi Akar - Mingguan</h3><p>Minggu <b>08.30 WITA</b><br>Tradisi budaya Manggarai kuat</p></div></div>
+<div class="misa-content" id="Akar-kbg"><div class="card" style="text-align:center"><h3>🌾 Akar - KBG</h3><p>Jumat sore 16.00 WITA - Katekese keluarga</p></div></div>
 </div>
 </section>
 
@@ -168,9 +168,9 @@ h1,h2,h3{font-family:'Cinzel',serif}
 <div class="head"><span>BAGIAN 05 • PENGUMUMAN</span><h2>Panggilan Nikah - Live Search</h2><p>Ketik nama di bawah - JavaScript filter otomatis</p></div>
 <div class="search-box"><input type="text" id="searchNikah" placeholder="🔍 Cari nama pasangan..." onkeyup="filterNikah()"><button class="btn btn-p" onclick="filterNikah()">Cari</button></div>
 <div id="nikahList" style="max-width:720px;margin:auto;display:flex;flex-direction:column;gap:12px">
-<div class="card nikah-item"><b>Yohanes Longko + Maria Goreti Longko</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman I - Minggu 20 Okt 2026 - Stasi Pusat</span><span style="float:right;background:#D2B48C;color:#4B2E1A;padding:4px 10px;border-radius:100px;font-size:10px">Baru</span></div>
-<div class="card nikah-item"><b>Fransiskus R. + Sisilia M. Longko</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman II - Stasi Longko - 19 Okt 2026</span></div>
-<div class="card nikah-item"><b>Petrus Toka + Yohana L. Toka</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman III - Stasi Toka - Nikah 27 Okt 2026</span></div>
+<div class="card nikah-item"><b>Yohanes Daun + Maria Goreti Daun</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman I - Minggu 20 Okt 2026 - Stasi Buah</span><span style="float:right;background:#D2B48C;color:#4B2E1A;padding:4px 10px;border-radius:100px;font-size:10px">Baru</span></div>
+<div class="card nikah-item"><b>Fransiskus R. + Sisilia M. Daun</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman II - Stasi Daun - 19 Okt 2026</span></div>
+<div class="card nikah-item"><b>Petrus Akar + Yohana L. Akar</b><br><span style="font-size:12px;color:#7A5A3E">Pengumuman III - Stasi Akar - Nikah 27 Okt 2026</span></div>
 </div>
 </section>
 
@@ -185,26 +185,26 @@ h1,h2,h3{font-family:'Cinzel',serif}
 
 <div class="modal" id="modal" onclick="closeModal()"><div class="modal-box" onclick="event.stopPropagation()"><h3 id="modalTitle" style="font-family:'Cinzel';font-size:18px">Judul</h3><p id="modalDesc" style="margin-top:14px;font-size:14px;line-height:1.7;color:#5A3E28;white-space:pre-line">Deskripsi</p><div style="margin-top:22px;display:flex;gap:10px"><button class="btn btn-p" onclick="closeModal()">Tutup ✕</button><button class="btn btn-g" onclick="shareContent()">Bagikan 🔗</button></div></div></div>
 
-<footer class="footer"><div class="foot"><div><h4 style="font-family:'Cinzel'">PAROKI AKRE BORONG</h4><p style="font-size:12px;color:#D2B48C;line-height:1.6">Jl. Trans Flores, Borong<br>Manggarai Timur, NTT 86571<br>Keuskupan Ruteng<br><br>✉️ parokiakreborong@gmail.com<br>📞 WA: +62 812-xxxx-xxxx<br>▶️ YouTube: Paroki Akre Borong</p></div><div><h4>MISA</h4><a onclick="showMisa('longko','mingguan')">Stasi Longko</a><a onclick="showMisa('pusat','mingguan')">Stasi Pusat</a><a onclick="showMisa('toka','mingguan')">Stasi Toka</a><a href="#">Jadwal KBG</a></div><div><h4>SAKRAMEN</h4><a onclick="openModal('baptis')">Baptis</a><a onclick="openModal('komuni')">Komuni</a><a onclick="openModal('nikah')">Pernikahan</a><a onclick="openModal('krisma')">Krisma</a></div><div><h4>LINK</h4><a href="#">Keuskupan Ruteng</a><a href="#">KWI</a><a href="#">Vatikan</a><a href="#">Berita</a></div></div><div class="copy">© 2026 PAROKI AKRE BORONG • Website dengan JavaScript Interaktif • Coklat Putih Blur Artistik • Dibuat untuk Umat</div></footer>
+<footer class="footer"><div class="foot"><div><h4 style="font-family:'Cinzel'">PAROKI AKRE BORONG</h4><p style="font-size:12px;color:#D2B48C;line-height:1.6">Jl. Trans Flores, Borong<br>Manggarai Timur, NTT 86571<br>Keuskupan Ruteng<br><br>✉️ parokiakreborong@gmail.com<br>📞 WA: +62 812-xxxx-xxxx<br>▶️ YouTube: Paroki Akre Borong</p></div><div><h4>MISA</h4><a onclick="showMisa('Daun','mingguan')">Stasi Daun</a><a onclick="showMisa('Buah','mingguan')">Stasi Buah</a><a onclick="showMisa('Akar','mingguan')">Stasi Akar</a><a href="#">Jadwal KBG</a></div><div><h4>SAKRAMEN</h4><a onclick="openModal('baptis')">Baptis</a><a onclick="openModal('komuni')">Komuni</a><a onclick="openModal('nikah')">Pernikahan</a><a onclick="openModal('krisma')">Krisma</a></div><div><h4>LINK</h4><a href="#">Keuskupan Ruteng</a><a href="#">KWI</a><a href="#">Vatikan</a><a href="#">Berita</a></div></div><div class="copy">© 2026 PAROKI AKRE BORONG • Website dengan JavaScript Interaktif • Coklat Putih Blur Artistik • Dibuat untuk Umat</div></footer>
 
 <script>
 // === JAVASCRIPT LENGKAP ===
 const modalData={
 'sejarah-gereja':{title:'Sejarah Gereja Akre Borong',desc:'Gereja pertama dibangun 1978 dari bambu dan ijuk oleh P. Yosef Behi SVD.\n\n1975: Misionaris pertama tiba jalan kaki Ruteng-Borong 3 hari.\n1985: Kapela semi permanen.\n1995: Renovasi pertama.\n2015: Diresmikan sebagai Paroki mandiri - Pastor Paroki pertama P. Simon SVD.\n2026: Kapasitas 800 umat, 3 stasi, 32 KBG, 1.850 KK.\n\nBangunan arsitektur Manggarai-Flores dengan atap limas.'},
-'sejarah-pendiri':{title:'Sejarah Pendiri Paroki',desc:'Pendiri Utama:\n1. P. Yosef Behi SVD - Misionaris pertama (1975-1985)\n2. Mama Maria Longko - Ketua umat pertama & donatur awal\n3. Bapak Frans Toka - Donatur tanah gereja 2 hektar\n4. Dewan Adat Borong - Memberikan restu adat\n\nMereka berjalan kaki dari Ruteng ke Borong membawa salib kayu 3 meter.'},
-'geografis':{title:'Letak Geografis Paroki',desc:'Koordinat: -8.6821° S, 120.6245° E\nKetinggian: 450 mdpl\nLuas Pastoral: 120 km²\nBatas Wilayah:\n• Utara: Kec. Rana Mese\n• Selatan: Laut Sawu\n• Timur: Kec. Kota Komba\n• Barat: Kec. Borong\n\nAkses: Jalan Trans Flores aspal, 15 km dari pusat Kota Borong.\nIklim: Tropis pegunungan, 22-28°C\nJumlah Umat: 1.850 KK (7.200 jiwa)'},
+'sejarah-pendiri':{title:'Sejarah Pendiri Paroki',desc:'Pendiri Utama:\n1. P. Yosef Behi SVD - Misionaris pertama (1975-1985)\n2. Mama Maria Daun - Ketua umat pertama & donatur awal\n3. Bapak Frans Akar - Donatur tanah gereja 2 hektar\n4. Dewan Adat Borong - Memberikan restu adat\n\nMereka berjalan kaki dari Ruteng ke Borong membawa salib kayu 3 meter.'},
+'geografis':{title:'Letak Geografis Paroki',desc:'Koordinat: -8.6821° S, 120.6245° E\nKetinggian: 450 mdpl\nLuas Pastoral: 120 km²\nBatas Wilayah:\n• Utara: Kec. Rana Mese\n• Selatan: Laut Sawu\n• Timur: Kec. Kota Komba\n• Barat: Kec. Borong\n\nAkses: Jalan Trans Flores aspal, 15 km dari Buah Kota Borong.\nIklim: Tropis pegunungan, 22-28°C\nJumlah Umat: 1.850 KK (7.200 jiwa)'},
 'visi':{title:'Visi Misi Paroki Akre Borong',desc:'VISI:\nMenjadi komunitas beriman yang mandiri, solider, misioner dan berakar pada budaya Manggarai serta terbuka terhadap perkembangan zaman.\n\nMISI:\n1. Penguatan iman berbasis KBG\n2. Pendidikan Katolik yang berkualitas\n3. Pemberdayaan ekonomi umat (kopdit, pertanian)\n4. Pelestarian budaya Manggarai yang selaras dengan iman\n5. Pelayanan sosial bagi yang miskin dan terpinggirkan\n\nMotto: "Satu Hati, Satu Iman, Satu Kasih"'},
-'dewan':{title:'Dewan Paroki Periode 2024-2027',desc:'Ketua DPP: Bpk. Yohanes Jehamat\nWakil: Bpk. Sipri Longko\nSekretaris: Ibu Maria Goreti\nBendahara: Ibu Sisilia M.\n\nSeksi Liturgi: Bpk. Fransiskus\nSeksi Pewartaan: Ibu Yohana\nSeksi Pelayanan: Bpk. Petrus\n\nKetua OMK: Fr. Frans Longko\nKetua WKRI: Ibu Maria Toka\nKetua BIAK: Sr. Maria SVD'},
+'dewan':{title:'Dewan Paroki Periode 2024-2027',desc:'Ketua DPP: Bpk. Yohanes Jehamat\nWakil: Bpk. Sipri Daun\nSekretaris: Ibu Maria Goreti\nBendahara: Ibu Sisilia M.\n\nSeksi Liturgi: Bpk. Fransiskus\nSeksi Pewartaan: Ibu Yohana\nSeksi Pelayanan: Bpk. Petrus\n\nKetua OMK: Fr. Frans Daun\nKetua WKRI: Ibu Maria Akar\nKetua BIAK: Sr. Maria SVD'},
 'liturgi':{title:'Petugas Liturgi',desc:'Jadwal Petugas Mingguan:\nLektor: Bergilir 12 orang - jadwal di papan pengumuman\nPemazmur: 8 orang - latihan tiap Sabtu 16.00\nMisdinar: 25 anak - latihan Minggu 10.30\nDirigen & Organis: Bpk. Yohanes & Ibu Sisilia\n\nTata Gerak: Mengikuti Pedoman Liturgi Keuskupan Ruteng.\nPakaian Liturgi: Nuansa coklat-putih sesuai tema gereja.'},
 'pastoral':{title:'Layanan Pastoral',desc:'1. Kunjungan Orang Sakit: Hubungi pastor paroki - tersedia 24 jam untuk darurat\n2. Konseling Keluarga: Setiap Selasa & Kamis 15.00-17.00 di pastoran\n3. Pendampingan Duka: Tim duka siap 24 jam\n4. Pelayanan Sosial: Bantuan beras, beasiswa, pengobatan\n5. Pastoral Lansia: Kunjungan tiap bulan\n\nWA Pastoral: +62 812-xxxx-xxxx'},
-'baptis':{title:'Pelayanan Sakramen Pembabtisan',desc:'SYARAT:\n• Fotokopi KK & KTP orang tua\n• Surat Nikah Gereja orang tua\n• Wali baptis sudah Krisma & ada surat baptis\n• Mengikuti pembinaan orang tua (Jumat sebelum baptis 19.00)\n\nJADWAL:\nBayi: Sabtu minggu ke-2 jam 09.00 WITA di gereja pusat\nDewasa: Setelah katekumenat 1 tahun\n\nDAFTAR:\nVia WA Sekretariat: +62 812-xxxx-xxxx\nGratis - persembahan sukarela\n\nCatatan: Pakaian bayi putih, bawa lilin baptis.'},
-'tobat':{title:'Sakramen Pengakuan Dosa (Tobat)',desc:'JADWAL RUTIN:\nSabtu: 16.00-17.30 WITA di kamar pengakuan gereja pusat\nMinggu: 30 menit sebelum misa (jika pastor ada)\n\nPERJANJIAN:\nBisa janjian via WA pastor paroki untuk waktu lain\n\nPENGAKUAN UMUM:\nMasa Adven & Prapaskah: Jadwal khusus akan diumumkan\n\nPersiapan: Rachmat batin, doa tobat, pemeriksaan batin.'},
+'baptis':{title:'Pelayanan Sakramen Pembabtisan',desc:'SYARAT:\n• Fotokopi KK & KTP orang tua\n• Surat Nikah Gereja orang tua\n• Wali baptis sudah Krisma & ada surat baptis\n• Mengikuti pembinaan orang tua (Jumat sebelum baptis 19.00)\n\nJADWAL:\nBayi: Sabtu minggu ke-2 jam 09.00 WITA di gereja Buah\nDewasa: Setelah katekumenat 1 tahun\n\nDAFTAR:\nVia WA Sekretariat: +62 812-xxxx-xxxx\nGratis - persembahan sukarela\n\nCatatan: Pakaian bayi putih, bawa lilin baptis.'},
+'tobat':{title:'Sakramen Pengakuan Dosa (Tobat)',desc:'JADWAL RUTIN:\nSabtu: 16.00-17.30 WITA di kamar pengakuan gereja Buah\nMinggu: 30 menit sebelum misa (jika pastor ada)\n\nPERJANJIAN:\nBisa janjian via WA pastor paroki untuk waktu lain\n\nPENGAKUAN UMUM:\nMasa Adven & Prapaskah: Jadwal khusus akan diumumkan\n\nPersiapan: Rachmat batin, doa tobat, pemeriksaan batin.'},
 'komuni':{title:'Komuni Pertama',desc:'Syarat: Kelas 4 SD, sudah baptis, mengikuti pembinaan 6 bulan (Minggu jam 11.00)\n\nMateri: Doa-doa pokok, 10 Perintah Allah, Sakramen, Ekaristi\n\nUjian: Lisan & tulisan\n\nPerayaan: Biasanya bulan Agustus bersamaan pesta pelindung\n\nPakaian: Putih-putih, bawa rosario\n\nDaftar: Di sekretariat paroki mulai Januari'},
 'sakit':{title:'Pengurapan Orang Sakit',desc:'LAYANAN 24 JAM DARURAT:\nHubungi Pastor Paroki: +62 812-xxxx-xxxx (WA/Call)\n\nSyarat: Orang sakit yang serius, akan operasi, lansia lemah\n\nPelayanan:\n• Di rumah sakit: Pastor datang ke RSUD Borong\n• Di rumah: Kunjungan rumah\n• Di gereja: Setelah misa jika kondisi memungkinkan\n\nYang perlu disiapkan: Salib kecil, lilin, air suci\n\nGratis - pelayanan kasih\n\nDoa: Umat dimohon doakan kesembuhan.'},
 'krisma':{title:'Sakramen Krisma (Penguatan)',desc:'Jadwal: Tiap 2 tahun sekali bersama Uskup Keuskupan Ruteng\nTerakhir: 2024, Selanjutnya: 2026\n\nSyarat:\n• Sudah baptis & komuni pertama\n• Usia minimal 12 tahun / kelas 7 SMP\n• Mengikuti pembinaan 8 bulan (Sabtu 15.00)\n• Hafal doa-doa pokok & syahadat\n\nMateri: Roh Kudus, Gereja, Kesaksian iman\n\nPakaian: Putih-putih, bawa kain krisma\n\nPendaftaran: Di sekretariat - mulai 6 bulan sebelumnya'},
 'nikah':{title:'Sakramen Pernikahan Katolik',desc:'SYARAT WAJIB:\n1. Kursus Persiapan Perkawinan (KPP) 3 bulan - tiap Sabtu 19.00\n2. Surat baptis baru (<6 bulan) dari paroki asal\n3. Surat keterangan belum menikah dari desa & paroki\n4. Surat keterangan kursus KPP\n5. Panggilan nikah 3x minggu berturut-turut di gereja\n6. Surat dispensasi jika beda agama/belum cukup umur\n\nWAKTU:\nDaftar minimal 3 bulan sebelum nikah\nMisa nikah: Sabtu jam 09.00 atau 11.00 (janjian)\n\nBIAYA:\nAdministrasi: Rp 300.000\nPersembahan misa: Sukarela\n\nHubungi: Sekretariat Paroki'},
 'imamat':{title:'Panggilan Imamat & Hidup Bakti',desc:'Bagi OMK yang merasa terpanggil menjadi imam, bruder, suster:\n\nTahapan:\n1. Datang ke pastor paroki untuk sharing panggilan\n2. Mengikuti pembinaan panggilan tiap bulan\n3. Live-in di seminari (1 minggu)\n4. Tes masuk seminari\n\nSeminari Terdekat:\n• Seminari Menengah St. Yohanes Berkhmans Todabelu\n• Seminari Tinggi St. Paulus Ledalero\n\nBiaya: Ditanggung Keuskupan & donatur\n\nKontak Panggilan: P. Simon SVD - WA +62 812-xxxx-xxxx\n\nDoa: Mohon doa umat untuk panggilan.'},
-'berita1':{title:'Tahbisan Imam Baru 2026 - Dokumentasi HD',desc:'Pada 15 Oktober 2026, 12 imam baru ditahbiskan oleh Mgr. Siprianus Hormat di Katedral Ruteng.\n\nDari Paroki Akre Borong:\n1. P. Yohanes Longko, Pr (asal Stasi Longko)\n2. P. Fransiskus Toka, Pr (asal Stasi Toka)\n3. P. Petrus Borong, Pr (asal Stasi Pusat)\n\nMisa Perdana di Paroki Akre Borong: Minggu, 27 Oktober 2026 jam 09.00 WITA - dihadiri 1.200 umat.\n\nFoto-foto dokumentasi versi CERAH HD tanpa ubah wajah (teknik manual brightness) sudah tersedia di galeri. Jubah putih imam baru lebih bersih, wajah tetap asli 100%.\n\nLive streaming tersedia di YouTube Paroki Akre Borong.'}
+'berita1':{title:'Tahbisan Imam Baru 2026 - Dokumentasi HD',desc:'Pada 15 Oktober 2026, 12 imam baru ditahbiskan oleh Mgr. Siprianus Hormat di Katedral Ruteng.\n\nDari Paroki Akre Borong:\n1. P. Yohanes Daun, Pr (asal Stasi Daun)\n2. P. Fransiskus Akar, Pr (asal Stasi Akar)\n3. P. Petrus Borong, Pr (asal Stasi Buah)\n\nMisa Perdana di Paroki Akre Borong: Minggu, 27 Oktober 2026 jam 09.00 WITA - dihadiri 1.200 umat.\n\nFoto-foto dokumentasi versi CERAH HD tanpa ubah wajah (teknik manual brightness) sudah tersedia di galeri. Jubah putih imam baru lebih bersih, wajah tetap asli 100%.\n\nLive streaming tersedia di YouTube Paroki Akre Borong.'}
 };
 
 // Navbar scroll
@@ -251,7 +251,7 @@ function scrollToSection(id){
 function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}) }
 
 // Misa Tabs
-let currentStasi='pusat', currentJenis='harian';
+let currentStasi='Buah', currentJenis='harian';
 function switchStasi(stasi){
   currentStasi=stasi;
   document.querySelectorAll('#stasiTabs .tab').forEach(t=>t.classList.toggle('active',t.dataset.stasi===stasi));
@@ -314,7 +314,7 @@ function addToCalendar(title,time){
 }
 
 // Live badge random
-const badges=['✦ LIVE • Misa Minggu 07.00 WITA • Stasi Pusat','✦ 32 KBG Aktif • Doa Rabu 19.00 WITA','✦ Pendaftaran Baptis Dibuka - Sabtu Minggu ke-2','✦ 3 Pasangan Panggilan Nikah Minggu Ini - Cek Pengumuman','✦ Renovasi Atap 90% - Terima kasih umat!'];
+const badges=['✦ LIVE • Misa Minggu 07.00 WITA • Stasi Buah','✦ 32 KBG Aktif • Doa Rabu 19.00 WITA','✦ Pendaftaran Baptis Dibuka - Sabtu Minggu ke-2','✦ 3 Pasangan Panggilan Nikah Minggu Ini - Cek Pengumuman','✦ Renovasi Atap 90% - Terima kasih umat!'];
 let badgeIdx=0;
 setInterval(()=>{
   badgeIdx=(badgeIdx+1)%badges.length;
